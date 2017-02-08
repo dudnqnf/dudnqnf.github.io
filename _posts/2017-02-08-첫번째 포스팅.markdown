@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "처음 쓰는 글"
+date:   2017-02-08 17:23:06 +0900
+categories: 카테고리?
+---
+### 안녕 친구들
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
