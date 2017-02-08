@@ -5,6 +5,7 @@ date:   2017-02-08 17:23:06 +0900
 categories: 카테고리?
 ---
 ### 안녕 친구들
+포스팅 바꾸기
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
