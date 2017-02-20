@@ -1,0 +1,44 @@
+$greycolor           : #97AAC3;
+$career_top_height   : 18px;
+
+#about{
+  a{
+    text-decoration: none;
+    color:#A15277;
+  }
+  line-height: 1.7em;
+
+  .section_title{
+    font-size:23px;
+    font-weight:bold;
+    margin-top:50px;
+    clear:both;
+  }
+
+  .section_content{
+    margin-top:15px;
+    clear:both;
+  }
+
+  .content_name{
+    font-weight: bold;
+    float:left;
+    height:$career_top_height;
+  }
+
+  .content_date{
+    float:right;
+    color:$greycolor;
+    height:$career_top_height;
+  }
+
+  .content_subname{
+    clear:both;
+    color:$greycolor;
+  }
+
+  .content_detail{
+    clear:both;
+    margin-top:8px;
+  }
+}
