@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "운동생활"
+title:  "DIPLE"
 date:   2016-01-01
-excerpt: "스포츠펙토리 생활운동 통합플랫폼 '운동생활'"
+category: Android MobileApp
+position: 3명 / 서버 개발
 project: true
 tag:
 - project
-- company
+- private
 comments: true
 ---
 
