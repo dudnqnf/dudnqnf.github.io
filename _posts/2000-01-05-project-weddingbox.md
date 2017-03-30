@@ -3,7 +3,7 @@ layout: post
 title:  "웨딩박스"
 date:   2016-01-01
 category: Android MobileApp
-position: 3명 / 안드로이드 개발
+position: 안드로이드 개발
 project: true
 tag:
 - project

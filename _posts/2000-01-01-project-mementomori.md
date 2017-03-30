@@ -3,7 +3,7 @@ layout: post
 title:  "Mementomori"
 date:   2016-01-01
 category: Web
-position: 3명 / 퍼블리싱
+position: 퍼블리싱
 project: true
 tag:
 - Project

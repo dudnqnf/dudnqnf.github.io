@@ -3,7 +3,7 @@ layout: post
 title:  "운동생활"
 date:   2016-01-01
 category: Hybrid MobileApp
-position: 3명 / 서버, 웹, 안드로이드 총괄 기획 및 개발
+position: 안드로이드, 웹, 서버 개발
 project: true
 tag:
 - project
