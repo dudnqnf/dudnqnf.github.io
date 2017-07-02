@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-05-14T17:52:25+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">Markdown Syntax</title><link href="http://localhost:4000/markdown-syntax/" rel="alternate" type="text/html" title="Markdown Syntax" /><published>2016-03-15T00:00:00+09:00</published><updated>2016-03-15T00:00:00+09:00</updated><id>http://localhost:4000/markdown-syntax</id><content type="html" xml:base="http://localhost:4000/markdown-syntax/">&lt;h2 id=&quot;html-elements&quot;&gt;HTML Elements&lt;/h2&gt;
+
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+&lt;h1 id=&quot;heading-1&quot;&gt;Heading 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;heading-2&quot;&gt;Heading 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-3&quot;&gt;Heading 3&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-4&quot;&gt;Heading 4&lt;/h4&gt;
+
+&lt;h5 id=&quot;heading-5&quot;&gt;Heading 5&lt;/h5&gt;
+
+&lt;h6 id=&quot;heading-6&quot;&gt;Heading 6&lt;/h6&gt;
+
+&lt;h3 id=&quot;body-text&quot;&gt;Body text&lt;/h3&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+
+&lt;p class=&quot;image-right&quot;&gt;&lt;img src=&quot;https://mmistakes.github.io/minimal-mistakes/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
+
+&lt;p&gt;HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/p&gt;
+
+&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
+
+&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item one
+    &lt;ol&gt;
+      &lt;li&gt;sub item one&lt;/li&gt;
+      &lt;li&gt;sub item two&lt;/li&gt;
+      &lt;li&gt;sub item three&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;table rules=&quot;groups&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Foot1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Foot2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;Foot3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;buttons&quot;&gt;Buttons&lt;/h2&gt;
+
+&lt;p&gt;Make any link standout more when applying the &lt;code class=&quot;highlighter-rouge&quot;&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-success&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Success Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Primary Button&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-warning&quot;&gt;Warning Button&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Danger Button&lt;/a&gt;&lt;/div&gt;
+&lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/a&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;kbd&quot;&gt;KBD&lt;/h2&gt;
+
+&lt;p&gt;You can also use &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt; tag for keyboard buttons.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/span&gt;W&lt;span class=&quot;nt&quot;&gt;&amp;lt;/kbd&amp;gt;&amp;lt;kbd&amp;gt;&lt;/span&gt;A&lt;span class=&quot;nt&quot;&gt;&amp;lt;/kbd&amp;gt;&amp;lt;kbd&amp;gt;&lt;/span&gt;S&lt;span class=&quot;nt&quot;&gt;&amp;lt;/kbd&amp;gt;&amp;lt;kbd&amp;gt;&lt;/span&gt;D&lt;span class=&quot;nt&quot;&gt;&amp;lt;/kbd&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Press &lt;kbd&gt;W&lt;/kbd&gt;&lt;kbd&gt;A&lt;/kbd&gt;&lt;kbd&gt;S&lt;/kbd&gt;&lt;kbd&gt;D&lt;/kbd&gt; to move your car. &lt;strong&gt;Midtown Maddness!!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;notices&quot;&gt;Notices&lt;/h2&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.notice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt; to a paragraph.&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><category term="syntax" /><category term="sample" /><category term="test" /><category term="jekyll" /><summary type="html">Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.</summary></entry><entry><title type="html">A Post with a Video</title><link href="http://localhost:4000/video-post/" rel="alternate" type="text/html" title="A Post with a Video" /><published>2016-03-15T00:00:00+09:00</published><updated>2016-03-15T00:00:00+09:00</updated><id>http://localhost:4000/video-post</id><content type="html" xml:base="http://localhost:4000/video-post/">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;Video embeds are responsive and scale with the width of the main content block with the help of &lt;a href=&quot;http://fitvidsjs.com/&quot;&gt;FitVids&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Not sure if this only effects Kramdown or if it’s an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; tags and remove &lt;code class=&quot;highlighter-rouge&quot;&gt;allowfullscreen&lt;/code&gt;. Example below:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;560&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;315&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><category term="sample" /><category term="post" /><category term="video" /><summary type="html">Custom written post descriptions are the way to go... if you're not lazy.</summary></entry><entry><title type="html">운동생활</title><link href="http://localhost:4000/project-sportforall/" rel="alternate" type="text/html" title="운동생활" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-sportforall</id><content type="html" xml:base="http://localhost:4000/project-sportforall/">&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;img src=&quot;../assets/img/project/sportsfactory1.jpg&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;근무처 : SportsFactory&lt;/li&gt;
+  &lt;li&gt;발주처 : SportsFactory&lt;/li&gt;
+  &lt;li&gt;역할 : 프로젝트 설계 및 개발&lt;/li&gt;
+  &lt;li&gt;앱 설명 : 생활체육 통합 플랫폼&lt;/li&gt;
+  &lt;li&gt;개발상세내역 :
+    &lt;ul&gt;
+      &lt;li&gt;Spring기반 서버 구현&lt;/li&gt;
+      &lt;li&gt;Android에서 일부 Native기능 구현&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;URL : &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.sportsfactory.sportforall&quot;&gt;GooglePlay&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;비고 : 서비스 중&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ## Preview --&gt;
+
+&lt;!-- ![Homepage Img](../assets/img/project/sportsfactory2.png) --&gt;
+&lt;!-- ![Homepage Img](../assets/img/project/sportsfactory3.png)
+
+![Homepage Img](../assets/img/project/sportsfactory4.png) --&gt;</content><author><name></name></author><category term="Hybrid MobileApp" /><category term="project" /><category term="company" /><summary type="html"></summary></entry><entry><title type="html">웨딩박스</title><link href="http://localhost:4000/project-weddingbox/" rel="alternate" type="text/html" title="웨딩박스" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-weddingbox</id><content type="html" xml:base="http://localhost:4000/project-weddingbox/">&lt;p&gt;&lt;img src=&quot;../assets/img/project/weddingbox0.png&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;근무처 : Mapitizer(맵피타이저)&lt;/li&gt;
+  &lt;li&gt;발주처 : Mapitizer&lt;/li&gt;
+  &lt;li&gt;역할 : 안드로이드 개발&lt;/li&gt;
+  &lt;li&gt;앱 설명 : 모바일 청첩장 기능, 개인 웨딩룸 꾸미기&lt;/li&gt;
+  &lt;li&gt;개발상세내역 :&lt;/li&gt;
+  &lt;li&gt;앱에 필요한 기본적인 서비스구현&lt;/li&gt;
+  &lt;li&gt;페이스북, 카카오톡, 네이버, 구글 로그인 api&lt;/li&gt;
+  &lt;li&gt;네이버 지도api&lt;/li&gt;
+  &lt;li&gt;URL : https://play.google.com/store/apps/details?id=com.takebox.wedding&lt;/li&gt;
+  &lt;li&gt;비고 : 앱 등록 후 서비스 중&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preview&quot;&gt;Preview&lt;/h2&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+    
+    &lt;a href=&quot;../assets/img/project/weddingbox1.jpg&quot;&gt;&lt;img src=&quot;../assets/img/project/weddingbox1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/weddingbox2.png&quot;&gt;&lt;img src=&quot;../assets/img/project/weddingbox2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/weddingbox3.png&quot;&gt;&lt;img src=&quot;../assets/img/project/weddingbox3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;figcaption&gt;모바일웹, 하이브리드웹앱&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name></name></author><category term="Android MobileApp" /><category term="project" /><category term="private" /><summary type="html"></summary></entry><entry><title type="html">DIPLE</title><link href="http://localhost:4000/project-diple/" rel="alternate" type="text/html" title="DIPLE" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-diple</id><content type="html" xml:base="http://localhost:4000/project-diple/">&lt;p&gt;&lt;img src=&quot;../assets/img/project/diple0.png&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;근무처 : Tacademy 팀프로젝트&lt;/li&gt;
+  &lt;li&gt;발주처 :&lt;/li&gt;
+  &lt;li&gt;역할 : 서버개발 및 안드로이드 보조&lt;/li&gt;
+  &lt;li&gt;앱 설명 : 데이트코스 추천 어플&lt;/li&gt;
+  &lt;li&gt;개발상세내역 : 앱에 필요한 기본적인 서비스구현&lt;/li&gt;
+  &lt;li&gt;Tmap지도api&lt;/li&gt;
+  &lt;li&gt;URL :&lt;/li&gt;
+  &lt;li&gt;비고 : 개발완료는 하였지만 서비스는 하지않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preview&quot;&gt;Preview&lt;/h2&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+    
+    &lt;a href=&quot;../assets/img/project/diple2.png&quot;&gt;&lt;img src=&quot;../assets/img/project/diple2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/diple3.png&quot;&gt;&lt;img src=&quot;../assets/img/project/diple3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/diple4.png&quot;&gt;&lt;img src=&quot;../assets/img/project/diple4.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;figcaption&gt;모바일웹, 하이브리드웹앱&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name></name></author><category term="Android MobileApp" /><category term="project" /><category term="private" /><summary type="html"></summary></entry><entry><title type="html">PERPL</title><link href="http://localhost:4000/project-perpl/" rel="alternate" type="text/html" title="PERPL" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-perpl</id><content type="html" xml:base="http://localhost:4000/project-perpl/">&lt;p&gt;&lt;img src=&quot;../assets/img/project/perpl0.png&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;근무처 : Tacademy 팀프로젝트&lt;/li&gt;
+  &lt;li&gt;발주처 :&lt;/li&gt;
+  &lt;li&gt;역할 : 서버개발 및 안드로이드 보조&lt;/li&gt;
+  &lt;li&gt;앱 설명 : 길거리 아티스트 소개 어플&lt;/li&gt;
+  &lt;li&gt;개발상세내역 :&lt;/li&gt;
+  &lt;li&gt;앱에 필요한 기본적인 서비스구현&lt;/li&gt;
+  &lt;li&gt;동영상 업로드, 편집 기능 개발&lt;/li&gt;
+  &lt;li&gt;URL :&lt;/li&gt;
+  &lt;li&gt;비고 : 개발완료는 하였지만 서비스는 하지않음&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;preview&quot;&gt;Preview&lt;/h2&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+    
+    &lt;a href=&quot;../assets/img/project/perpl2.png&quot;&gt;&lt;img src=&quot;../assets/img/project/perpl2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/perpl3.png&quot;&gt;&lt;img src=&quot;../assets/img/project/perpl3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/perpl5.png&quot;&gt;&lt;img src=&quot;../assets/img/project/perpl5.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;figcaption&gt;모바일웹, 하이브리드웹앱&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name></name></author><category term="Android MobileApp" /><category term="project" /><category term="private" /><summary type="html"></summary></entry><entry><title type="html">홍익대 마술동아리</title><link href="http://localhost:4000/project-hongikmagics/" rel="alternate" type="text/html" title="홍익대 마술동아리" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-hongikmagics</id><content type="html" xml:base="http://localhost:4000/project-hongikmagics/">&lt;p&gt;&lt;img src=&quot;../assets/img/project/hongikmagics1.png&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;분류 : 개인프로젝트&lt;/li&gt;
+  &lt;li&gt;개발인원 및 비중도 : 1명 / 100%&lt;/li&gt;
+  &lt;li&gt;역할 : 기획, 디자인, 개발&lt;/li&gt;
+  &lt;li&gt;개발기술 :
+    &lt;ul&gt;
+      &lt;li&gt;Front-end : html, css, javascript(jquery)&lt;/li&gt;
+      &lt;li&gt;Back-end : php(cafe24 웹호스팅)&lt;/li&gt;
+      &lt;li&gt;Design : bootstrap&lt;/li&gt;
+      &lt;li&gt;Mobile : jquerymobile, android&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;상세내역 :
+    &lt;ul&gt;
+      &lt;li&gt;WebURL : &lt;a href=&quot;http://www.hongikmagics.com/&quot;&gt;http://www.hongikmagics.com/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;MobileWebURL : &lt;a href=&quot;http://www.hongikmagics.com/m/&quot;&gt;http://www.hongikmagics.com/m/&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Android : &lt;a href=&quot;https://play.google.com/store/apps/details?id=service.Dimony.MAGICS&quot;&gt;https://play.google.com/store/apps/details?id=service.Dimony.MAGICS&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;preview&quot;&gt;Preview&lt;/h2&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+    
+    &lt;a href=&quot;../assets/img/project/hongikmagics_mobile0.png&quot;&gt;&lt;img src=&quot;../assets/img/project/hongikmagics_mobile0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/hongikmagics_mobile1.png&quot;&gt;&lt;img src=&quot;../assets/img/project/hongikmagics_mobile1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;../assets/img/project/hongikmagics_mobile2.png&quot;&gt;&lt;img src=&quot;../assets/img/project/hongikmagics_mobile2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;figcaption&gt;모바일웹, 하이브리드웹앱&lt;/figcaption&gt;
+&lt;/figure&gt;</content><author><name></name></author><category term="Web / MobileWeb / Hybrid MobileApp" /><category term="project" /><category term="private" /><summary type="html"></summary></entry><entry><title type="html">Mementomori</title><link href="http://localhost:4000/project-mementomori/" rel="alternate" type="text/html" title="Mementomori" /><published>2016-01-01T00:00:00+09:00</published><updated>2016-01-01T00:00:00+09:00</updated><id>http://localhost:4000/project-mementomori</id><content type="html" xml:base="http://localhost:4000/project-mementomori/">&lt;p&gt;&lt;img src=&quot;../assets/img/project/mementomori1.png&quot; alt=&quot;Homepage Img&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt;상기 이미지는 현재 홈페이지 이미지이며 작업 당시의 이미지와 다릅니다.&lt;/center&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;개요&quot;&gt;개요&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;근무처 : TrendTok&lt;/li&gt;
+  &lt;li&gt;발주처 : 메멘토모리&lt;/li&gt;
+  &lt;li&gt;개발인원 : 3명&lt;/li&gt;
+  &lt;li&gt;역할 : 퍼블리싱&lt;/li&gt;
+  &lt;li&gt;상세내역 : 레이아웃(HTML, CSS) 수정 및 제작&lt;/li&gt;
+  &lt;li&gt;비고 : 제작보조&lt;/li&gt;
+  &lt;li&gt;홈페이지 : &lt;a href=&quot;http://mementomori.co.kr/&quot;&gt;MEMENTOMORI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Web" /><category term="Project" /><category term="Web" /><summary type="html"></summary></entry><entry><title type="html">MathJax Example</title><link href="http://localhost:4000/mathjax-example/" rel="alternate" type="text/html" title="MathJax Example" /><published>2015-08-10T00:00:00+09:00</published><updated>2015-08-10T00:00:00+09:00</updated><id>http://localhost:4000/mathjax-example</id><content type="html" xml:base="http://localhost:4000/mathjax-example/">&lt;p&gt;&lt;a href=&quot;http://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt; is a simple way of including Tex/LaTex/MathML based mathematics in HTML webpages. To get up and running you need to include the MathJax script in the header of your github pages page, and then write some maths. For LaTex, there are two delimiters you need to know about, one for block or displayed mathematics &lt;code class=&quot;highlighter-rouge&quot;&gt;\[ ... \]&lt;/code&gt;, and the other for inline mathematics &lt;code class=&quot;highlighter-rouge&quot;&gt;\( ... \)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;To enable MathJax support be sure Kramdown is your Markdown flavor of choice and MathJax is set to true in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;markdown: kramdown
+mathjax: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Here is an example MathJax inline rendering \\( 1/x^{2} \\), and here is a block rendering: 
+\\[ \frac{1}{n^{2}} \\]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here is an example MathJax inline rendering \( 1/x^{2} \), and here is a block rendering: 
+\[ \frac{1}{n^{2}} \]&lt;/p&gt;
+
+&lt;p&gt;The only thing to look out for is the escaping of the backslash when using markdown, so the delimiters become &lt;code class=&quot;highlighter-rouge&quot;&gt;\\[ ... \\]&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;\\( ... \\)&lt;/code&gt; for inline and block maths respectively.&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{align*}
+  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
+      \vdots &amp; \ddots &amp; \vdots \\
+      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
+    \end{array} \right)
+  \left( \begin{array}{c}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{array} \right)
+\end{align*} %]]&gt;&lt;/script&gt;</content><author><name></name></author><category term="markdown" /><category term="mathjax" /><category term="example" /><category term="test" /><category term="jekyll" /><summary type="html">MathJax Example for Moon Jekyll Theme.</summary></entry><entry><title type="html">Syntax Highlighting Post</title><link href="http://localhost:4000/code-highlighting-post/" rel="alternate" type="text/html" title="Syntax Highlighting Post" /><published>2013-08-16T00:00:00+09:00</published><updated>2013-08-16T00:00:00+09:00</updated><id>http://localhost:4000/code-highlighting-post</id><content type="html" xml:base="http://localhost:4000/code-highlighting-post/">&lt;p&gt;Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;highlighted-code-blocks&quot;&gt;Highlighted Code Blocks&lt;/h3&gt;
+
+&lt;p&gt;To modify styling and highlight colors edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/css/syntax.css&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navigation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% if page.previous %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.previous.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.previous.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Previous article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+    {% if page.next %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.next.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.next.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TagIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_layouts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tag_index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_prefix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Tagged: '&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_suffix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;#8211;'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'description'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;An archive of posts tagged &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;standard-code-block&quot;&gt;Standard Code Block&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&amp;gt;
+    {% if page.previous %}
+        &amp;lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
+    {% endif %}
+    {% if page.next %}
+        &amp;lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
+    {% endif %}
+&amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;fenced-code-blocks&quot;&gt;Fenced Code Blocks&lt;/h3&gt;
+
+&lt;p&gt;To modify styling and highlight colors edit &lt;code class=&quot;highlighter-rouge&quot;&gt;/assets/css/syntax.css&lt;/code&gt;. Line numbers and a few other things can be modified in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Consult &lt;a href=&quot;http://jekyllrb.com/docs/configuration/&quot;&gt;Jekyll’s documentation&lt;/a&gt; for more information.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navigation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% if page.previous %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.previous.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.previous.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Previous article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+    {% if page.next %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.next.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.next.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TagIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'index.html'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'_layouts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'tag_index.html'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_prefix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Tagged: '&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tag_title_suffix'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;amp;#8211;'&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'description'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;An archive of posts tagged &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;github-gist-embed&quot;&gt;GitHub Gist Embed&lt;/h3&gt;
+
+&lt;p&gt;An example of a Gist embed below.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;404: Not Found
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/mmistakes/6589546.js&quot;&gt; &lt;/script&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Syntax_highlighting&quot;&gt;http://en.wikipedia.org/wiki/Syntax_highlighting&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="sample post" /><category term="code" /><category term="highlighting" /><summary type="html">Demo post displaying the various ways of highlighting code in Markdown.</summary></entry></feed>

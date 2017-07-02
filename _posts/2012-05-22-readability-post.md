@@ -1,45 +1,64 @@
 ---
 layout: post
-title: "Testing Readability with a Bunch of Text"
+title: "Note#1 P-NP"
 date: 2012-05-22
-excerpt: "A ton of text to test readability."
-tags: [sample post, readability, test]
+excerpt: "의식의 흐름"
+tags: [Note]
 comments: true
 ---
 
-Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
+###식을 몰라도 x에 어떤값 넣으면 결과는 알수있는 경우
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+## P문제
+!!! 목적 : 새로운 X가 들어왔을 때 그 정답을 바로 알고 싶은경우!
+P는 NP의 부분집합 (NP중에서 그 경향성을 완벽히 파악하여 식을 알수 있는것)
+-> 식은 안다는 것은? -> 전부 탐색안하고 필요한 부분만 딱 알아보면 알수 있다는것
 
-## Cupidatat 90's lo-fi authentic try-hard
+식을 알기에 어떤 값을 넣었을때 정답이 나오는지 알수 있는것
+모든 수학문제는 공식으로 풀수있다.
 
-In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90's.
+어떤 x가 들어와도 그 결과를 알수 있는것
 
-* Sartorial hoodie
-* Labore viral forage
-* Tote bag selvage
-* DIY exercitation et id ugh tumblr church-key
+헤밀턴 순환인지 아닌지를 판별할 수 있는 식이 있어서
+x가 무슨무슨 값일때(방정식 풀듯이) y가 참이 나온다~ 이런식으로 가능
 
-Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.
+y가 참이 나오는 모든 x를 구할수 있다!
 
-Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven't heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney's Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.
+x + y = 5
+x = 1 , 2, 3, 4
+y = 4 , 3, 2, 1
 
-## Forage occaecat cardigan qui
+당연히 NP의 조건(x가 들어왔을때 답인것을 아는것)도 충족
 
-Fashion axe hella gastropub lo-fi kogi 90's aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.
+머신러닝에서 Linear / Binary / Multinominal Regression 방식?
 
-> Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.
 
-Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney's next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney's sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.
+## NP문제
+!!! 목적 : 정답을 나오게 하는 X들은 어떤 것들이 있는가?!
+P와의 차이점 : 뭐일떄 true인지 false인지 모르니까 일일이 확인해야됌.
+이것들의 경향성을 완벽하게 표현할 수 있는 식을 찾으면 P문제가 되는것!
 
-## Hoodie Duis
+처음부터 끝까지 모든 경우의 수를 다 넣어서 정답을 확인해야하는것
+노가다로 풀어야하는 공식없는 문제도 있다.
+= metaheuristic 문제
 
-Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90's pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.
+헤밀턴 순환이 존재하는 예를 보여주고 헤민턴 순환이 가능하다고 말하는것!
+사실 근데 헤밀턴 순환이 되는지 안되는지 결과를 모르면 아예 예를 다 찾아봐야됨.
+이것을 일반화 할 식이 존재하지 않기때문!
+해밀턴조건을 충족하는지는 정답이 나왔을 경우만 알수있다!
 
-### Thundercats Ho!
+(    ) = 5
 
-Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney's seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.
+x = 1, y = 2 (참) -> 판별은 어떻게? -> 앞에서 말한 조건을 충족했으니까 -> 그말인 즉 조건을 식으로 만들지 못하는 경우도 있다!!!!
+-> 식이 존재 할수도(P=NP) 존재하지 않을수도(P!=NP) 있지만 아직까지는 식을 모르니 노가다 밖에 답이없다
+-> 그럼 NP는 무조건 노가다? (하나하나 다 체크해보기) -> NO!
+-> NP문제마다 효율적인 방법이 존재 (경향성을 찾아내는 법?!)
+-> GA / ACO / NN 등?
 
-Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney's selfies. Odd Future Banksy non authentic.
 
-Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.
+알고리즘 시험문제들은 전부 P문제!
+왜냐하면 내가 만든 알고리즘에 만족하는 어떤 X가 들어와도 정답이 성립해야하기 때문
+
+머신러닝에서 Neural Network
+
+식 추론을 할수 없다 -> Neural Network로는 어떻게? -> ???????
