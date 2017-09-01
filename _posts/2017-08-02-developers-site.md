@@ -2,7 +2,7 @@
 layout: post
 title: "개발관련 사이트"
 date: 2012-05-22
-excerpt: "의식의 흐름"
+excerpt: "Developer Site"
 tags: [Note]
 comments: true
 ---
