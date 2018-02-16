@@ -14,7 +14,8 @@ comments: true
 
 # Markdown Systax
 - \\({e}^{i\pi}+1=0\\)
-- \( \sum_{t=1}^{T}\beta_{t} \)
+- $$\sum_{t=1}^{T}\beta_{t}$$
+- $e^x=1+x+\cdots\$
 <pre>
 문장입력
 
