@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Markdown Syntax"
-date:   2016-03-15
+date:   2016-01-01
 excerpt: "Markdown sample"
 tag:
 - markdown
