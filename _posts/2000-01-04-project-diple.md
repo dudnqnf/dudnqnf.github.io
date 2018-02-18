@@ -5,9 +5,6 @@ date:   2016-01-01
 category: Android MobileApp
 position: 서버 개발
 project: true
-tag:
-- project
-- private
 comments: true
 ---
 

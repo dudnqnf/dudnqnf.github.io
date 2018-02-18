@@ -1,13 +1,10 @@
 ---
 layout: post
-title:  "홍익대 마술동아리"
+title:  "MAGICS"
 date:   2016-01-01
-category: Web / MobileWeb / Hybrid MobileApp
+category: Web, MobileWeb, Hybrid MobileApp
 position: ALL
 project: true
-tag:
-- project
-- private
 comments: true
 ---
 

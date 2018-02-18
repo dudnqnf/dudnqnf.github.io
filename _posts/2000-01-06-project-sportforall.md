@@ -5,9 +5,6 @@ date:   2016-01-01
 category: Hybrid MobileApp
 position: 안드로이드, 웹, 서버 개발
 project: true
-tag:
-- project
-- company
 comments: true
 ---
 

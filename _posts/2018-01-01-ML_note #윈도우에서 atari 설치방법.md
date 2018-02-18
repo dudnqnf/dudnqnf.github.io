@@ -3,7 +3,8 @@ layout: post
 title: "윈도우에서 아타리 설치방법"
 date: 2018-01-01
 excerpt: "Machine Learning"
-tags: [Note]
+tags:
+- Machine Learning
 comments: true
 ---
 > 출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기

@@ -5,9 +5,6 @@ date:   2016-01-01
 category: Web
 position: 퍼블리싱
 project: true
-tag:
-- Project
-- Web
 comments: true
 ---
 

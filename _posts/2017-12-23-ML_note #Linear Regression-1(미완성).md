@@ -3,7 +3,8 @@ layout: post
 title: "ML_note #Linear Regression-1(미완성)"
 date: 2017-12-22
 excerpt: "Machine Learning"
-tags: [Note]
+tags:
+- Machine Learning
 comments: true
 ---
 # Linear Regression(선형회귀)

@@ -3,7 +3,8 @@ layout: post
 title: "ML_note #Machine Learning Preview"
 date: 2017-12-22
 excerpt: "Machine Learning"
-tags: [Note]
+tags:
+- Machine Learning
 comments: true
 ---
 # Machine Learning Preview

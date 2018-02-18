@@ -1,13 +1,10 @@
 ---
 layout: post
-title:  "웨딩박스"
+title:  "WeddingBox"
 date:   2016-01-01
 category: Android MobileApp
 position: 안드로이드 개발
 project: true
-tag:
-- project
-- private
 comments: true
 ---
 

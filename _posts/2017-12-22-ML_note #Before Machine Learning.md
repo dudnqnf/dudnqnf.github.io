@@ -3,7 +3,8 @@ layout: post
 title: "ML_note #Before Machine Learning"
 date: 2017-12-22
 excerpt: "Machine Learning"
-tags: [Note]
+tags:
+- Machine Learning
 comments: true
 ---
 # Before Machine Learning
