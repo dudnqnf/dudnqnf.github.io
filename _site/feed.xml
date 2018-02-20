@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-18T16:19:01+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-18T18:23:45+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;blockquote&gt;
   &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -719,17 +719,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;행동(A) = (1,0,0,0) : 위로 움직임&lt;/li&gt;
   &lt;li&gt;보상함수(R)
     &lt;ul&gt;
-      &lt;li&gt;\({e}^{i\pi}+1=0\)&lt;/li&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;$R = E[R&lt;/td&gt;
-              &lt;td&gt;S, A]$&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
+      &lt;li&gt;$R = E[R|S, A]$&lt;/li&gt;
       &lt;li&gt;(1,1) 지점에서 위로 움직였을 때 받을 보상(E = 기대)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -739,23 +729,23 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
         &lt;table&gt;
           &lt;tbody&gt;
             &lt;tr&gt;
-              &lt;td&gt;P = P[S = s’&lt;/td&gt;
-              &lt;td&gt;S = s, A = a] : (1, 1) 지점에서 움직일지 말지&lt;/td&gt;
+              &lt;td&gt;$P^{ss’}_{a} = P[S = s’&lt;/td&gt;
+              &lt;td&gt;S = s, A = a]$ : (1, 1) 지점에서 움직일지 말지&lt;/td&gt;
             &lt;/tr&gt;
           &lt;/tbody&gt;
         &lt;/table&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;정책
+  &lt;li&gt;정책(π)
     &lt;ul&gt;
       &lt;li&gt;
         &lt;table&gt;
           &lt;tbody&gt;
             &lt;tr&gt;
-              &lt;td&gt;π(a&lt;/td&gt;
+              &lt;td&gt;$π(a&lt;/td&gt;
               &lt;td&gt;s) = P[A = a&lt;/td&gt;
-              &lt;td&gt;S = s] : (1,1) 위치에서 어디로 이동해야 가장 좋을지&lt;/td&gt;
+              &lt;td&gt;S = s]$ : (1,1) 위치에서 어디로 이동해야 가장 좋을지&lt;/td&gt;
             &lt;/tr&gt;
           &lt;/tbody&gt;
         &lt;/table&gt;
@@ -769,7 +759,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;감가율( γ )&lt;/li&gt;
   &lt;li&gt;모든 보상은 감가율이 계산되어 가치로 환산됨&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;감가율을 고려한 미래보상의 현재 가치 = γ^(𝒌−𝟏) 𝑹_𝒌&lt;/p&gt;
+    &lt;p&gt;감가율을 고려한 미래보상의 현재 가치(V) = γ^(𝒌−𝟏) 𝑹_𝒌&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;반환값 (G)
     &lt;ul&gt;
