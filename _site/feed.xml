@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-18T18:23:45+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;blockquote&gt;
-  &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-21T15:44:37+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
 
 &lt;h4 id=&quot;msys2&quot;&gt;MSYS2&lt;/h4&gt;
 &lt;ul&gt;
@@ -50,11 +46,12 @@
 &lt;h4 id=&quot;오류수정&quot;&gt;오류수정&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;pip install gym[atari]로 하면 오류남&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-6</title><link href="http://localhost:4000/ML_note-RL-6/" rel="alternate" type="text/html" title="ML_note #RL-6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-6</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-6/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/ul&gt;
 
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-6</title><link href="http://localhost:4000/ML_note-RL-6/" rel="alternate" type="text/html" title="ML_note #RL-6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-6</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -173,11 +170,11 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-5</title><link href="http://localhost:4000/ML_note-RL-5/" rel="alternate" type="text/html" title="ML_note #RL-5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-5</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-5/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;
 
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-5</title><link href="http://localhost:4000/ML_note-RL-5/" rel="alternate" type="text/html" title="ML_note #RL-5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-5</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -314,14 +311,14 @@
           &lt;li&gt;target = (R + ᵧv’)&lt;/li&gt;
           &lt;li&gt;현재 상태(s) 입력, target을 정답으로 신경망 개선&lt;/li&gt;
         &lt;/ul&gt;
+
+        &lt;blockquote&gt;
+          &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+        &lt;/blockquote&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-4</title><link href="http://localhost:4000/ML_note-RL-4/" rel="alternate" type="text/html" title="ML_note #RL-4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-4</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-4/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-4</title><link href="http://localhost:4000/ML_note-RL-4/" rel="alternate" type="text/html" title="ML_note #RL-4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-4</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -474,11 +471,11 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도 문제 해결&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-3</title><link href="http://localhost:4000/ML_note-RL-3/" rel="alternate" type="text/html" title="ML_note #RL-3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-3</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-3/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도 문제 해결&lt;/code&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-3</title><link href="http://localhost:4000/ML_note-RL-3/" rel="alternate" type="text/html" title="ML_note #RL-3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-3</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -571,11 +568,11 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-2</title><link href="http://localhost:4000/ML_note-RL-2/" rel="alternate" type="text/html" title="ML_note #RL-2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-2</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-2/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
 
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-2</title><link href="http://localhost:4000/ML_note-RL-2/" rel="alternate" type="text/html" title="ML_note #RL-2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-2</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -583,13 +580,13 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;그리드-월드와-다이내믹-프로그래밍&quot;&gt;그리드 월드와 다이내믹 프로그래밍&lt;/h2&gt;
-&lt;h4 id=&quot;그리드월드&quot;&gt;그리드월드&lt;/h4&gt;
+&lt;h3 id=&quot;그리드월드&quot;&gt;그리드월드&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;n * n의 격자 공간&lt;/li&gt;
   &lt;li&gt;이전에 가정했던 5 * 5 격자공간을 가정&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;동적-계획법다이내믹-프로그래밍&quot;&gt;동적 계획법(다이내믹 프로그래밍)&lt;/h4&gt;
+&lt;h3 id=&quot;동적-계획법다이내믹-프로그래밍&quot;&gt;동적 계획법(다이내믹 프로그래밍)&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;정의
     &lt;ul&gt;
@@ -604,11 +601,11 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;동적-계획법을-통한-강화학습&quot;&gt;동적 계획법을 통한 강화학습&lt;/h4&gt;
+&lt;h3 id=&quot;동적-계획법을-통한-강화학습&quot;&gt;동적 계획법을 통한 강화학습&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;가치(Q함수) update 시에 사용&lt;/li&gt;
-  &lt;li&gt;V 	=  E[𝑹_𝟏  + γ 𝑹_𝟐 + γ^𝟐 𝑹_𝟑   + … + γ^(𝒏−𝟏) 𝑹_𝒏]&lt;br /&gt;
-  	=   E[𝑹_𝟏 + γV’]&lt;/li&gt;
+  &lt;li&gt;V 	=  $E[𝑹_𝟏  + γ 𝑹_𝟐 + γ^𝟐 𝑹_𝟑   + … + γ^{𝒏−𝟏} 𝑹_𝒏]$&lt;br /&gt;
+  	=   $E[𝑹_𝟏 + γV’]$&lt;/li&gt;
   &lt;li&gt;
     &lt;table&gt;
       &lt;tbody&gt;
@@ -623,19 +620,19 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;벨만 최적 방정식 -&amp;gt; 가치 이터레이션&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;정책-평가와-정책-발전&quot;&gt;정책 평가와 정책 발전&lt;/h4&gt;
+&lt;h3 id=&quot;정책-평가와-정책-발전&quot;&gt;정책 평가와 정책 발전&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;정책평가 = Q함수 값들을 이용해 현재 노드 가치 update&lt;/li&gt;
   &lt;li&gt;정책발전(탐욕정책) = Q함수값들을 이용해 현재 노드의 정책 update&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;정책-이터레이션&quot;&gt;정책 이터레이션&lt;/h4&gt;
+&lt;h3 id=&quot;정책-이터레이션&quot;&gt;정책 이터레이션&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;평가 -&amp;gt; 평가 -&amp;gt; 발전 -&amp;gt; 평가 -&amp;gt; … -&amp;gt; 평가 -&amp;gt; &lt;strong&gt;행동&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;평가시 이전 정책을 토대로 평가&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;가치-이터레이션&quot;&gt;가치 이터레이션&lt;/h4&gt;
+&lt;h3 id=&quot;가치-이터레이션&quot;&gt;가치 이터레이션&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;정책 발전이 존재하지 않음&lt;/li&gt;
   &lt;li&gt;평가 -&amp;gt; 평가 -&amp;gt;  … -&amp;gt; 평가 -&amp;gt; &lt;strong&gt;행동&lt;/strong&gt;&lt;/li&gt;
@@ -653,22 +650,22 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;hr /&gt;
 
-&lt;h4 id=&quot;문제점&quot;&gt;문제점&lt;/h4&gt;
+&lt;h3 id=&quot;문제점&quot;&gt;문제점&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;환경에 대한 정보부족 문제&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-1</title><link href="http://localhost:4000/ML_note-RL-1/" rel="alternate" type="text/html" title="ML_note #RL-1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-1/">&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;hr /&gt;
 
-&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-1</title><link href="http://localhost:4000/ML_note-RL-1/" rel="alternate" type="text/html" title="ML_note #RL-1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;강화학습이란&quot;&gt;강화학습이란&lt;/h2&gt;
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;시행착오를 통하여 학습하는 알고리즘&lt;/li&gt;
   &lt;li&gt;실제상황
@@ -680,7 +677,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;적용가능한-문제들&quot;&gt;적용가능한 문제들&lt;/h4&gt;
+&lt;h3 id=&quot;적용가능한-문제들&quot;&gt;적용가능한 문제들&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;경로 찾기, 스케줄링&lt;/li&gt;
   &lt;li&gt;미로찾기, Frozen Lake, TSP …&lt;/li&gt;
@@ -689,14 +686,14 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;기본-모델&quot;&gt;기본 모델&lt;/h2&gt;
-&lt;h4 id=&quot;순차적-행동-결정-문제&quot;&gt;순차적 행동 결정 문제&lt;/h4&gt;
+&lt;h3 id=&quot;순차적-행동-결정-문제&quot;&gt;순차적 행동 결정 문제&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;순차적으로 행동을 결정해야하는 문제들&lt;/li&gt;
   &lt;li&gt;5 * 5 격자공간에서 이동 최단거리를 탐색 문제로 가정
 ( (0, 0)에서 시작, (4, 4)에서 종료 )&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;순차적-행동-결정-문제의-구성-요소&quot;&gt;순차적 행동 결정 문제의 구성 요소&lt;/h4&gt;
+&lt;h3 id=&quot;순차적-행동-결정-문제의-구성-요소&quot;&gt;순차적 행동 결정 문제의 구성 요소&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;상태(state) : &amp;lt;/tab&amp;gt;현재 내가 어디에 있는지&lt;/li&gt;
   &lt;li&gt;행동(action) : 어디로 이동할지&lt;/li&gt;
@@ -707,13 +704,13 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 &lt;hr /&gt;
 
 &lt;h2 id=&quot;mdp와-벨만-방정식&quot;&gt;MDP와 벨만 방정식&lt;/h2&gt;
-&lt;h4 id=&quot;mdpmarkov-decision-process&quot;&gt;MDP(Markov Decision Process)&lt;/h4&gt;
+&lt;h3 id=&quot;mdpmarkov-decision-process&quot;&gt;MDP(Markov Decision Process)&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;순차적 행동결정 문제를 수학적 정의하여 프로세스를 설명&lt;/li&gt;
   &lt;li&gt;상태 / 행동 / 보상 / 상태 변환 확률 / 정책 으로 구성&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;mdp-구성-요소&quot;&gt;MDP 구성 요소&lt;/h4&gt;
+&lt;h3 id=&quot;mdp-구성-요소&quot;&gt;MDP 구성 요소&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;상태(S) = (1, 1) : (1, 1)지점에 존재&lt;/li&gt;
   &lt;li&gt;행동(A) = (1,0,0,0) : 위로 움직임&lt;/li&gt;
@@ -725,55 +722,36 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/li&gt;
   &lt;li&gt;상태 변환 확률(P)
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;$P^{ss’}_{a} = P[S = s’&lt;/td&gt;
-              &lt;td&gt;S = s, A = a]$ : (1, 1) 지점에서 움직일지 말지&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
+      &lt;li&gt;$P^{ss’}_{a} = P[S = s’|S = s, A = a]$ : (1, 1) 지점에서 움직일지 말지&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;정책(π)
     &lt;ul&gt;
-      &lt;li&gt;
-        &lt;table&gt;
-          &lt;tbody&gt;
-            &lt;tr&gt;
-              &lt;td&gt;$π(a&lt;/td&gt;
-              &lt;td&gt;s) = P[A = a&lt;/td&gt;
-              &lt;td&gt;S = s]$ : (1,1) 위치에서 어디로 이동해야 가장 좋을지&lt;/td&gt;
-            &lt;/tr&gt;
-          &lt;/tbody&gt;
-        &lt;/table&gt;
-      &lt;/li&gt;
+      &lt;li&gt;$π(a|s) = P[A = a|S = s]$ : (1,1) 위치에서 어디로 이동해야 가장 좋을지&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;mdp-외-문제를-풀기위해-필요한-개념&quot;&gt;MDP 외 문제를 풀기위해 필요한 개념&lt;/h4&gt;
+&lt;h3 id=&quot;mdp-외-문제를-풀기위해-필요한-개념&quot;&gt;MDP 외 문제를 풀기위해 필요한 개념&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;감가율( γ )&lt;/li&gt;
   &lt;li&gt;모든 보상은 감가율이 계산되어 가치로 환산됨&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;감가율을 고려한 미래보상의 현재 가치(V) = γ^(𝒌−𝟏) 𝑹_𝒌&lt;/p&gt;
+    &lt;p&gt;감가율을 고려한 미래보상의 현재 가치(V) = $γ^{𝒌−𝟏} 𝑹_𝒌$&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;반환값 (G)
     &lt;ul&gt;
       &lt;li&gt;감가율이 계산된 보삼들의 합&lt;/li&gt;
-      &lt;li&gt;𝑹_𝟏  + γ𝑹_𝟐 + γ^𝟐 𝑹_𝟑 + … + γ^(𝒏−𝟏) 𝑹_𝒏&lt;/li&gt;
+      &lt;li&gt;$𝑹_𝟏  + γ𝑹_𝟐 + γ^𝟐 𝑹_𝟑 + … + γ^{𝒏−𝟏} 𝑹_𝒏$&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;가치함수(V)&lt;/li&gt;
   &lt;li&gt;각각의 노드들이 가지고 있는 가치&lt;/li&gt;
   &lt;li&gt;이후에 받을 감가율이 계산된 보상들의 합&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;V 	=  E[G | S = s] &lt;br /&gt;
-  =  E[𝑹_𝟏  + γ𝑹_𝟐 + “γ” ^𝟐 𝑹_𝟑   + … + “γ” ^(𝒏−𝟏) 𝑹_𝒏]&lt;br /&gt;
-  =   E[𝑹_𝟏 + γV’]&lt;/p&gt;
+    &lt;p&gt;$V =  E[G | S = s]$ &lt;br /&gt;
+  =  $E[𝑹_𝟏  + γ𝑹_𝟐 + γ^𝟐 𝑹_𝟑   + … + γ^{𝒏−𝟏} 𝑹_𝒏]$&lt;br /&gt;
+  =  $E[𝑹_𝟏 + γV’]$&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Q함수
     &lt;ul&gt;
@@ -783,30 +761,40 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
       &lt;li&gt;오른쪽의 Q함수 = (오른쪽의 보상 + γ * 오른쪽 노드의 다음행동 Q함수)&lt;/li&gt;
       &lt;li&gt;계산 가능 형태의 가치함수(V)&lt;br /&gt;
 = 각 방향의 정책 * 각 방향의 Q함수 &lt;br /&gt;
-=  ∑π(a|s) q(s, a)&lt;/li&gt;
+=  $\sum_{a\in A} π(a|s) * q(s, a)$&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;벨만-방정식&quot;&gt;벨만 방정식&lt;/h4&gt;
+&lt;h3 id=&quot;벨만-방정식&quot;&gt;벨만 방정식&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;가치를 계산하는 방정식&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;벨만-기대-방정식&quot;&gt;벨만 기대 방정식&lt;/h4&gt;
+&lt;h3 id=&quot;벨만-기대-방정식&quot;&gt;벨만 기대 방정식&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;정책에 따라서 가치를 판단 ( 정책은 항상 고정되어 있고 정책 발전시에만 변경됨 )&lt;/li&gt;
   &lt;li&gt;가치함수 = 각 방향의 정책 * 각 방향의 (보상 + 감가율 * 다음 상태의 가치함수)&lt;/li&gt;
+  &lt;li&gt;$𝑽_π (s)$ = $𝑬_π[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s]$ &lt;br /&gt;
+= $\sum_{𝒂\in 𝑨}π(a|s) * (𝑹_{𝒕+𝟏}+γ𝒗_π (𝒔^′))$&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;벨만-최적-방정식&quot;&gt;벨만 최적 방정식&lt;/h4&gt;
+&lt;h3 id=&quot;벨만-최적-방정식&quot;&gt;벨만 최적 방정식&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;가장 높은 Q함수를 가진 노드만을 선택하여 가치함수 계산 ( 정책과 상관없이 )&lt;/li&gt;
   &lt;li&gt;가치함수 = 보상 + 감가율 * 최고 가치를 가진 방향의 가치함수&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN-1/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
+  &lt;li&gt;$\prod^{*}(s,a) =
+\begin{cases}
+1\ if\ a = argmax_{a\in A}q^*(s,a)
+\\ 0\ otherwise
+\end{cases}$&lt;/li&gt;
+  &lt;li&gt;$v^*(s)	= maxE[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s ]$&lt;/li&gt;
+  &lt;li&gt;$q^{*}(s) = E[R + γ max q^* (𝑺_{𝒕+𝟏}, a’) | 𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]$&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;blockquote&gt;
-  &lt;p&gt;김성훈 교수님의 온라인 강의 및 논문 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN-1/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -900,10 +888,11 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 &lt;ul&gt;
   &lt;li&gt;그림 또는 필터의 depth는 어떤 의미가 있는가?&lt;/li&gt;
   &lt;li&gt;그림도 3차원이고 필터도 3차원인데 어떻게 행렬곱을 하는가?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #CNN-1(미완성)</title><link href="http://localhost:4000/ML_note-CNN-1/" rel="alternate" type="text/html" title="ML_note #CNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#CNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-CNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
+&lt;/ul&gt;
+
 &lt;blockquote&gt;
   &lt;p&gt;김성훈 교수님의 온라인 강의 및 논문 참고&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #CNN-1(미완성)</title><link href="http://localhost:4000/ML_note-CNN-1/" rel="alternate" type="text/html" title="ML_note #CNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#CNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-CNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -997,7 +986,11 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 &lt;ul&gt;
   &lt;li&gt;그림 또는 필터의 depth는 어떤 의미가 있는가?&lt;/li&gt;
   &lt;li&gt;그림도 3차원이고 필터도 3차원인데 어떻게 행렬곱을 하는가?&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #Linear Regression-1(미완성)</title><link href="http://localhost:4000/ML_note-Linear-Regression-1/" rel="alternate" type="text/html" title="ML_note #Linear Regression-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#Linear%20Regression-1</id><content type="html" xml:base="http://localhost:4000/ML_note-Linear-Regression-1/">&lt;h1 id=&quot;linear-regression선형회귀&quot;&gt;Linear Regression(선형회귀)&lt;/h1&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;김성훈 교수님의 온라인 강의 및 논문 참고&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #Linear Regression-1(미완성)</title><link href="http://localhost:4000/ML_note-Linear-Regression-1/" rel="alternate" type="text/html" title="ML_note #Linear Regression-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#Linear%20Regression-1</id><content type="html" xml:base="http://localhost:4000/ML_note-Linear-Regression-1/">&lt;h1 id=&quot;linear-regression선형회귀&quot;&gt;Linear Regression(선형회귀)&lt;/h1&gt;
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;교사학습의 가장 기본적인 모델&lt;/li&gt;

@@ -7,7 +7,6 @@ tags:
 - Machine Learning
 comments: true
 ---
-> 출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기
 
 # 윈도우에서 아타리 설치방법
 
@@ -39,3 +38,6 @@ comments: true
 
 #### 오류수정
 - pip install gym[atari]로 하면 오류남
+
+---
+> 출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기
