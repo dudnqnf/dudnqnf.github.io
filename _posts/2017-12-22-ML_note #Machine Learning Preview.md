@@ -4,7 +4,7 @@ title: "ML_note #Machine Learning Preview"
 date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
-- Machine Learning
+- Deep Learning
 comments: true
 ---
 # Machine Learning Preview

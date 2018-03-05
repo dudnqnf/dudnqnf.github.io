@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-02-21T15:44:37+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-05T15:31:10+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+
+&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;파이썬 라이브러리&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;
+  import numpy as np
+
+  # 배열 생성
+  np.array([1,2,3])
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">matplotlib</title><link href="http://localhost:4000/python_note-matplotlib/" rel="alternate" type="text/html" title="matplotlib" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#matplotlib</id><content type="html" xml:base="http://localhost:4000/python_note-matplotlib/">&lt;h1 id=&quot;matplotlib&quot;&gt;matplotlib&lt;/h1&gt;
+
+&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;파이썬 라이브러리&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;
+  import matplotlib.pyplot as plt
+
+  # 데이터 준비
+  x = np.arange(0, 6, 0.1)
+  y = np.sin(x)
+
+  # 그래프 그리기
+  plt.plot(x, y)
+  plt.show()
+
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
 
 &lt;h4 id=&quot;msys2&quot;&gt;MSYS2&lt;/h4&gt;
 &lt;ul&gt;
@@ -51,7 +83,7 @@
 &lt;hr /&gt;
 &lt;blockquote&gt;
   &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-6</title><link href="http://localhost:4000/ML_note-RL-6/" rel="alternate" type="text/html" title="ML_note #RL-6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-6</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-6</title><link href="http://localhost:4000/ML_note-RL-6/" rel="alternate" type="text/html" title="ML_note #RL-6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-6</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -174,7 +206,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-5</title><link href="http://localhost:4000/ML_note-RL-5/" rel="alternate" type="text/html" title="ML_note #RL-5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-5</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-5</title><link href="http://localhost:4000/ML_note-RL-5/" rel="alternate" type="text/html" title="ML_note #RL-5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-5</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -318,7 +350,7 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-4</title><link href="http://localhost:4000/ML_note-RL-4/" rel="alternate" type="text/html" title="ML_note #RL-4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-4</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-4</title><link href="http://localhost:4000/ML_note-RL-4/" rel="alternate" type="text/html" title="ML_note #RL-4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-4</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -475,7 +507,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-3</title><link href="http://localhost:4000/ML_note-RL-3/" rel="alternate" type="text/html" title="ML_note #RL-3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-3</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-3</title><link href="http://localhost:4000/ML_note-RL-3/" rel="alternate" type="text/html" title="ML_note #RL-3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-3</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -572,7 +604,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-2</title><link href="http://localhost:4000/ML_note-RL-2/" rel="alternate" type="text/html" title="ML_note #RL-2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-2</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-2</title><link href="http://localhost:4000/ML_note-RL-2/" rel="alternate" type="text/html" title="ML_note #RL-2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-2</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -660,7 +692,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-1</title><link href="http://localhost:4000/ML_note-RL-1/" rel="alternate" type="text/html" title="ML_note #RL-1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-1</title><link href="http://localhost:4000/ML_note-RL-1/" rel="alternate" type="text/html" title="ML_note #RL-1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -794,244 +826,4 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN-1/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
-
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;CNN이란
-    &lt;ul&gt;
-      &lt;li&gt;Convolutional Neural Network&lt;/li&gt;
-      &lt;li&gt;Convolution : 합성곱, &lt;del&gt;대단히 복잡한 것(네이버사전)&lt;/del&gt;&lt;/li&gt;
-      &lt;li&gt;NN을 이용한 이미지 인식 기술 중 현재 제일 좋은 성과를 보이고 있는 알고리즘&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;기존 알고리즘의 문제점
-    &lt;ul&gt;
-      &lt;li&gt;모든 픽셀을 다 교육하려니까 사진의 픽셀 수가 너무 많음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;기본 아이디어
-    &lt;ul&gt;
-      &lt;li&gt;사람의 시각적 인식은 수용영역과 추상화라는 개념을 통해서 간소화 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;수용영역
-    &lt;ul&gt;
-      &lt;li&gt;사람의 수용영역 = 사람의 초점&lt;/li&gt;
-      &lt;li&gt;CNN의 수용영역 = 사진의 특정 부분(필터의 크기)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;추상화
-    &lt;ul&gt;
-      &lt;li&gt;사람의 추상화 = 사람의 얼굴을 보면 픽셀단위로 기억하지 않고 대충 그렇게 생긴 얼굴이라고 추상화하여 기억&lt;/li&gt;
-      &lt;li&gt;CNN의 추상화 = 사진의 특정 부분 * 필터 (합성곱해서 나온 결과 사진, 뿌옇게 된 사진, 특징만 남은 사진)을 기억&lt;/li&gt;
-      &lt;li&gt;필터 = 특징을 잡아내 주는 역활&lt;/li&gt;
-      &lt;li&gt;모든 픽셀 데이터를 순간순간 마다 다 기억하지 않아도 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;용어-개념&quot;&gt;용어 개념&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;picture : 10 * 10 픽셀의 그림(sample)&lt;/li&gt;
-  &lt;li&gt;filter : 3 * 3 행렬 (여러가지 형태가 나올 수 있음)&lt;/li&gt;
-  &lt;li&gt;stride : 필터를 한번에 몇 칸씩 옮길지 (1로 가정)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;기존-nn으로의-해석&quot;&gt;기존 NN으로의 해석&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;그림에서 필터링 되는 각각의 부분들 = X&lt;/li&gt;
-  &lt;li&gt;필터 = W&lt;/li&gt;
-  &lt;li&gt;Y = WX 모델&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;전체-순서&quot;&gt;전체 순서&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;첫번쨰 필터셋(W1, W2, … , W6) 6개&lt;/li&gt;
-  &lt;li&gt;W1필터로 왼쪽 위부터 순서대로 한 칸씩 옮기며 값 생성(W1X1, W1X2, W1X3, …)
-«««&amp;lt; WX가 3차원 * 3차원인데?»»»»&lt;/li&gt;
-  &lt;li&gt;100번 반복하여 10 * 10 행렬 생성(layer 하나 생성)&lt;/li&gt;
-  &lt;li&gt;filter를 변경하여 또 다른 layer생성(W2X1, W2X2, W2X3, …)&lt;/li&gt;
-  &lt;li&gt;만약 filter가 6개 라면 10 * 10 * 6(depth) 짜리 행렬 생성 -&amp;gt; 1차 추상화된 그림&lt;/li&gt;
-  &lt;li&gt;추상화된 그림을 두번째 필터셋으로 교육&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-  &lt;li&gt;마지막 필터셋에는 relu대신 softmax함수 사용&lt;/li&gt;
-  &lt;li&gt;«««&amp;lt; 마지막 추상화된 그림은 softmax로 한다는데 어떻게 한다는건지…»»»»&lt;/li&gt;
-  &lt;li&gt;최종목적이 filter의 최적화?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;추가&quot;&gt;추가&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;relu(WX)를 각각에 넣어주면 더 좋음&lt;/li&gt;
-  &lt;li&gt;중간중간 pooling 해주는 것이 좋음&lt;/li&gt;
-  &lt;li&gt;pooling = sampling = 그림을 n등분 하여 각 구역의 최고값을 추출해서 만듬&lt;/li&gt;
-  &lt;li&gt;축소된 n * n 행렬이 나올것&lt;/li&gt;
-  &lt;li&gt;아무튼 마지막에 나온 행렬을 softmax함수로 꺼내서 어느것인지 예측하고 update&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;직관적으로-이해하기&quot;&gt;직관적으로 이해하기&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;전체적 관점 : 그림을 필터링 -&amp;gt; 추상화된 그림&lt;/li&gt;
-  &lt;li&gt;세부적 관점 : 그림의 각각의 조각을 필터링한 뒤 합친 그림 -&amp;gt; 추상화된 그림&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;중요한-점&quot;&gt;중요한 점&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;각 조각의 크기는 그대로 이나 depth가 계속 변화(filter가 몇개냐에 따라)&lt;/li&gt;
-  &lt;li&gt;그림의 depth = filter의 depth(depth = 한번에 넣어주는 그림의 개수)&lt;/li&gt;
-  &lt;li&gt;WX 보다 relu(WX)가 더 효과가 더 좋음&lt;/li&gt;
-  &lt;li&gt;pooling 이용시 효과가 더 좋음 : 구역의 크기(n * n)을 정해서 그림을 등분한 뒤 각각의 구역의 최대값만을 추린 행렬(=sampling)&lt;/li&gt;
-  &lt;li&gt;conv시 padding값을 주지 않으면 추상화된 그림은 작아짐&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;질문&quot;&gt;질문&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;그림 또는 필터의 depth는 어떤 의미가 있는가?&lt;/li&gt;
-  &lt;li&gt;그림도 3차원이고 필터도 3차원인데 어떻게 행렬곱을 하는가?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;김성훈 교수님의 온라인 강의 및 논문 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #CNN-1(미완성)</title><link href="http://localhost:4000/ML_note-CNN-1/" rel="alternate" type="text/html" title="ML_note #CNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#CNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-CNN-1/">&lt;h1 id=&quot;cnn&quot;&gt;CNN&lt;/h1&gt;
-
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;CNN이란
-    &lt;ul&gt;
-      &lt;li&gt;Convolutional Neural Network&lt;/li&gt;
-      &lt;li&gt;Convolution : 합성곱, &lt;del&gt;대단히 복잡한 것(네이버사전)&lt;/del&gt;&lt;/li&gt;
-      &lt;li&gt;NN을 이용한 이미지 인식 기술 중 현재 제일 좋은 성과를 보이고 있는 알고리즘&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;기존 알고리즘의 문제점
-    &lt;ul&gt;
-      &lt;li&gt;모든 픽셀을 다 교육하려니까 사진의 픽셀 수가 너무 많음&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;기본 아이디어
-    &lt;ul&gt;
-      &lt;li&gt;사람의 시각적 인식은 수용영역과 추상화라는 개념을 통해서 간소화 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;수용영역
-    &lt;ul&gt;
-      &lt;li&gt;사람의 수용영역 = 사람의 초점&lt;/li&gt;
-      &lt;li&gt;CNN의 수용영역 = 사진의 특정 부분(필터의 크기)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;추상화
-    &lt;ul&gt;
-      &lt;li&gt;사람의 추상화 = 사람의 얼굴을 보면 픽셀단위로 기억하지 않고 대충 그렇게 생긴 얼굴이라고 추상화하여 기억&lt;/li&gt;
-      &lt;li&gt;CNN의 추상화 = 사진의 특정 부분 * 필터 (합성곱해서 나온 결과 사진, 뿌옇게 된 사진, 특징만 남은 사진)을 기억&lt;/li&gt;
-      &lt;li&gt;필터 = 특징을 잡아내 주는 역활&lt;/li&gt;
-      &lt;li&gt;모든 픽셀 데이터를 순간순간 마다 다 기억하지 않아도 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;용어-개념&quot;&gt;용어 개념&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;picture : 10 * 10 픽셀의 그림(sample)&lt;/li&gt;
-  &lt;li&gt;filter : 3 * 3 행렬 (여러가지 형태가 나올 수 있음)&lt;/li&gt;
-  &lt;li&gt;stride : 필터를 한번에 몇 칸씩 옮길지 (1로 가정)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;기존-nn으로의-해석&quot;&gt;기존 NN으로의 해석&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;그림에서 필터링 되는 각각의 부분들 = X&lt;/li&gt;
-  &lt;li&gt;필터 = W&lt;/li&gt;
-  &lt;li&gt;Y = WX 모델&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;전체-순서&quot;&gt;전체 순서&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;첫번쨰 필터셋(W1, W2, … , W6) 6개&lt;/li&gt;
-  &lt;li&gt;W1필터로 왼쪽 위부터 순서대로 한 칸씩 옮기며 값 생성(W1X1, W1X2, W1X3, …)
-«««&amp;lt; WX가 3차원 * 3차원인데?»»»»&lt;/li&gt;
-  &lt;li&gt;100번 반복하여 10 * 10 행렬 생성(layer 하나 생성)&lt;/li&gt;
-  &lt;li&gt;filter를 변경하여 또 다른 layer생성(W2X1, W2X2, W2X3, …)&lt;/li&gt;
-  &lt;li&gt;만약 filter가 6개 라면 10 * 10 * 6(depth) 짜리 행렬 생성 -&amp;gt; 1차 추상화된 그림&lt;/li&gt;
-  &lt;li&gt;추상화된 그림을 두번째 필터셋으로 교육&lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-  &lt;li&gt;마지막 필터셋에는 relu대신 softmax함수 사용&lt;/li&gt;
-  &lt;li&gt;«««&amp;lt; 마지막 추상화된 그림은 softmax로 한다는데 어떻게 한다는건지…»»»»&lt;/li&gt;
-  &lt;li&gt;최종목적이 filter의 최적화?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;추가&quot;&gt;추가&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;relu(WX)를 각각에 넣어주면 더 좋음&lt;/li&gt;
-  &lt;li&gt;중간중간 pooling 해주는 것이 좋음&lt;/li&gt;
-  &lt;li&gt;pooling = sampling = 그림을 n등분 하여 각 구역의 최고값을 추출해서 만듬&lt;/li&gt;
-  &lt;li&gt;축소된 n * n 행렬이 나올것&lt;/li&gt;
-  &lt;li&gt;아무튼 마지막에 나온 행렬을 softmax함수로 꺼내서 어느것인지 예측하고 update&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;직관적으로-이해하기&quot;&gt;직관적으로 이해하기&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;전체적 관점 : 그림을 필터링 -&amp;gt; 추상화된 그림&lt;/li&gt;
-  &lt;li&gt;세부적 관점 : 그림의 각각의 조각을 필터링한 뒤 합친 그림 -&amp;gt; 추상화된 그림&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;중요한-점&quot;&gt;중요한 점&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;각 조각의 크기는 그대로 이나 depth가 계속 변화(filter가 몇개냐에 따라)&lt;/li&gt;
-  &lt;li&gt;그림의 depth = filter의 depth(depth = 한번에 넣어주는 그림의 개수)&lt;/li&gt;
-  &lt;li&gt;WX 보다 relu(WX)가 더 효과가 더 좋음&lt;/li&gt;
-  &lt;li&gt;pooling 이용시 효과가 더 좋음 : 구역의 크기(n * n)을 정해서 그림을 등분한 뒤 각각의 구역의 최대값만을 추린 행렬(=sampling)&lt;/li&gt;
-  &lt;li&gt;conv시 padding값을 주지 않으면 추상화된 그림은 작아짐&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;질문&quot;&gt;질문&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;그림 또는 필터의 depth는 어떤 의미가 있는가?&lt;/li&gt;
-  &lt;li&gt;그림도 3차원이고 필터도 3차원인데 어떻게 행렬곱을 하는가?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;김성훈 교수님의 온라인 강의 및 논문 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #Linear Regression-1(미완성)</title><link href="http://localhost:4000/ML_note-Linear-Regression-1/" rel="alternate" type="text/html" title="ML_note #Linear Regression-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#Linear%20Regression-1</id><content type="html" xml:base="http://localhost:4000/ML_note-Linear-Regression-1/">&lt;h1 id=&quot;linear-regression선형회귀&quot;&gt;Linear Regression(선형회귀)&lt;/h1&gt;
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;교사학습의 가장 기본적인 모델&lt;/li&gt;
-  &lt;li&gt;문제와 정답을 통해서 학습&lt;/li&gt;
-  &lt;li&gt;어떤 선형그래프를 그려내는지 추론하는 것(y = ax+b)&lt;/li&gt;
-  &lt;li&gt;x(입력)에 대한 y(정답)을 주어주고 가중치(a)와 bias(b)를 추론하는 것&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;기본문제&quot;&gt;기본문제&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;학습
-    &lt;ul&gt;
-      &lt;li&gt;수학시험에 50점(입력)을 받으면 C(정답) 였다&lt;/li&gt;
-      &lt;li&gt;수학시험에 70점(입력)을 받으면 B(정답) 였다&lt;/li&gt;
-      &lt;li&gt;수학시험에 90점(입력)을 받으면 A(정답) 였다&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;학습을 통해 근사되어갈 그래프
-    &lt;ul&gt;
-      &lt;li&gt;A = 4, B = 3, C = 2 이라고 할 떄( (+)점수는 0.5 )&lt;/li&gt;
-      &lt;li&gt;y = 0.05 * x - 0.5 (a = 0.05, b = -0.5)로 근사될 것&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;예측
-    &lt;ul&gt;
-      &lt;li&gt;만약 80점을 맞으면 내 학점은 어떻게 될 것인가? B+(정답)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;학습은-어떻게&quot;&gt;학습은 어떻게?&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Cost&lt;/li&gt;
-  &lt;li&gt;Regression&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;모델&quot;&gt;모델&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;정식표기 : Y = WX + b&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;sigmoid&quot;&gt;sigmoid&lt;/h4&gt;
-&lt;h4 id=&quot;relu&quot;&gt;relu&lt;/h4&gt;
-&lt;h4 id=&quot;softmax&quot;&gt;softmax&lt;/h4&gt;</content><author><name></name></author><category term="Machine Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN-1/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN-1/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>

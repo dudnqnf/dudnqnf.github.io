@@ -45,7 +45,7 @@
 <lastmod>2017-09-28T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/ML_note-Before-Machine-Learning/</loc>
+<loc>http://localhost:4000/ML_note-AI/</loc>
 <lastmod>2017-12-22T00:00:00+09:00</lastmod>
 </url>
 <url>
@@ -91,6 +91,14 @@
 <url>
 <loc>http://localhost:4000/ML_note-window-atari-install/</loc>
 <lastmod>2018-01-01T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/python_note-matplotlib/</loc>
+<lastmod>2018-03-05T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/python_note-numpy/</loc>
+<lastmod>2018-03-05T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404</loc>
