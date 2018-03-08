@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-05T15:31:10+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-08T14:02:17+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;파이썬 라이브러리&lt;/li&gt;
+  &lt;li&gt;행렬 계산을 편리하게 해주는 파이썬 라이브러리&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
@@ -10,12 +10,21 @@
   import numpy as np
 
   # 배열 생성
-  np.array([1,2,3])
+  arr = np.array([1,2,3])
+
+  # 브로드캐스트
+  arr = np.array([[1,2],[3,4]]) * np.array([1,2]) # [[1,4],[3,8]]
+
+  # 원소 접근
+  arr[1,1] # arr[1][1]
+  arr[:] # 전체 행렬
+  arr[:1] # 0번째 행까지
+  arr[1:] # 1번째 행부터
 &lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">matplotlib</title><link href="http://localhost:4000/python_note-matplotlib/" rel="alternate" type="text/html" title="matplotlib" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#matplotlib</id><content type="html" xml:base="http://localhost:4000/python_note-matplotlib/">&lt;h1 id=&quot;matplotlib&quot;&gt;matplotlib&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;파이썬 라이브러리&lt;/li&gt;
+  &lt;li&gt;그래프를 그려주는 파이썬 라이브러리&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
@@ -23,13 +32,29 @@
   import matplotlib.pyplot as plt
 
   # 데이터 준비
-  x = np.arange(0, 6, 0.1)
-  y = np.sin(x)
+  x = np.arange(0, 6, 0.1) # 0에서 6까지 0.1 간격으로 생성
+  y1 = np.sin(x)
+  y2 = np.cos(x)
 
   # 그래프 그리기
-  plt.plot(x, y)
+  plt.plot(x, y1, label=&quot;sin&quot;)
+  plt.plot(x, y2, linestyle = &quot;--&quot;, label=&quot;cos&quot;) # cos 함수는 점선으로 그리기
+  plt.xlabel(&quot;x&quot;) # x축 이름
+  plt.ylabel(&quot;y&quot;) # y축 이름
+  plt.title('sin &amp;amp; cos')  # 제목
+  plt.legend()
   plt.show()
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;h4 id=&quot;이미지-표시&quot;&gt;이미지 표시&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;
+  import matplotlib.pyplot as plt
+  from matplotlib.image import imread
+
+  img = imread('../dataset/lena.png') # 이미지 읽어오기
+  plt.imshow(img)
+
+  plt.show()
 &lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
 
 &lt;h4 id=&quot;msys2&quot;&gt;MSYS2&lt;/h4&gt;
@@ -83,7 +108,7 @@
 &lt;hr /&gt;
 &lt;blockquote&gt;
   &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-6</title><link href="http://localhost:4000/ML_note-RL-6/" rel="alternate" type="text/html" title="ML_note #RL-6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-6</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #6</title><link href="http://localhost:4000/RL_note-6/" rel="alternate" type="text/html" title="RL_note #6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#6</id><content type="html" xml:base="http://localhost:4000/RL_note-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -112,16 +137,14 @@
     &lt;ul&gt;
       &lt;li&gt;영상인식 분야에서 많이 사용되는 신경망&lt;/li&gt;
       &lt;li&gt;필터를 통한 이미지 추상화 후 입력&lt;/li&gt;
-      &lt;li&gt;DQN, A3C 알고리즘으로 행동 개선&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;DQN, A3C 알고리즘으로 행동 개선&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-  def build_model(self):
+        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def build_model(self):
     # CNN
     model = Sequential()
-    model.add(Conv2D(32, (8, 8), strides=(4,4), activation='relu', input_shape=self.state_size))
+    model.add(Conv2D(32, (8, 8), strides=(4,4), activation='relu'\
+    , input_shape=self.state_size))
     model.add(Conv2D(64, (4, 4), strides=(2,2), activation='relu')
     model.add(Conv2D(32, (2, 2), strides=(1,1), activation='relu')
     model.add(Flatten())
@@ -132,6 +155,11 @@
     model.summary()
     return model
 &lt;/code&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;전처리&quot;&gt;전처리&lt;/h4&gt;
 &lt;ul&gt;
@@ -206,7 +234,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-5</title><link href="http://localhost:4000/ML_note-RL-5/" rel="alternate" type="text/html" title="ML_note #RL-5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-5</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #5</title><link href="http://localhost:4000/RL_note-5/" rel="alternate" type="text/html" title="RL_note #5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#5</id><content type="html" xml:base="http://localhost:4000/RL_note-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -350,7 +378,7 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-4</title><link href="http://localhost:4000/ML_note-RL-4/" rel="alternate" type="text/html" title="ML_note #RL-4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-4</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #4</title><link href="http://localhost:4000/RL_note-4/" rel="alternate" type="text/html" title="RL_note #4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#4</id><content type="html" xml:base="http://localhost:4000/RL_note-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -507,7 +535,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-3</title><link href="http://localhost:4000/ML_note-RL-3/" rel="alternate" type="text/html" title="ML_note #RL-3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-3</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #3</title><link href="http://localhost:4000/RL_note-3/" rel="alternate" type="text/html" title="RL_note #3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#3</id><content type="html" xml:base="http://localhost:4000/RL_note-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -604,7 +632,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-2</title><link href="http://localhost:4000/ML_note-RL-2/" rel="alternate" type="text/html" title="ML_note #RL-2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-2</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #2</title><link href="http://localhost:4000/RL_note-2/" rel="alternate" type="text/html" title="RL_note #2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#2</id><content type="html" xml:base="http://localhost:4000/RL_note-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -692,7 +720,7 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RL-1</title><link href="http://localhost:4000/ML_note-RL-1/" rel="alternate" type="text/html" title="ML_note #RL-1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RL-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RL-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #1</title><link href="http://localhost:4000/RL_note-1/" rel="alternate" type="text/html" title="RL_note #1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#1</id><content type="html" xml:base="http://localhost:4000/RL_note-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -826,4 +854,4 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;blockquote&gt;
   &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN-1/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#RNN-1</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN-1/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
