@@ -135,7 +135,6 @@ body {
 // entry meta
 .entry-meta {
 	@include font-rem(12);
-	text-transform: uppercase;
 	color: lighten($color_tuatara,60);
 	padding-left: 0;
 	a {
@@ -178,12 +177,20 @@ header .entry-meta {
 .entry-title a {
     text-decoration: none;
 }
+.refer-tags {
+	display: block;
+		margin-top: 1rem;
+	width: 100%;
+		float: left;
+		text-align: left;
+}
 .entry-tags {
 	display: block;
     margin-top: 1rem;
 	width: 70%;
     float: left;
     text-align: left;
+		text-transform: uppercase;
 }
 .social-share {
 	display: block;

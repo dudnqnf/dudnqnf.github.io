@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-08T14:02:17+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-16T14:13:39+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -105,10 +105,7 @@
   &lt;li&gt;pip install gym[atari]로 하면 오류남&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #6</title><link href="http://localhost:4000/RL_note-6/" rel="alternate" type="text/html" title="RL_note #6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#6</id><content type="html" xml:base="http://localhost:4000/RL_note-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #6</title><link href="http://localhost:4000/RL_note-6/" rel="alternate" type="text/html" title="RL_note #6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#6</id><content type="html" xml:base="http://localhost:4000/RL_note-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -137,29 +134,25 @@
     &lt;ul&gt;
       &lt;li&gt;영상인식 분야에서 많이 사용되는 신경망&lt;/li&gt;
       &lt;li&gt;필터를 통한 이미지 추상화 후 입력&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;DQN, A3C 알고리즘으로 행동 개선&lt;/p&gt;
-
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def build_model(self):
-    # CNN
-    model = Sequential()
-    model.add(Conv2D(32, (8, 8), strides=(4,4), activation='relu'\
-    , input_shape=self.state_size))
-    model.add(Conv2D(64, (4, 4), strides=(2,2), activation='relu')
-    model.add(Conv2D(32, (2, 2), strides=(1,1), activation='relu')
-    model.add(Flatten())
-
-    # DQN 신경망
-    model.add(Dense(512, activation='relu'))
-    model.add(Dense(self.action_size))
-    model.summary()
-    return model
-&lt;/code&gt;&lt;/pre&gt;
-        &lt;/div&gt;
-      &lt;/li&gt;
+      &lt;li&gt;DQN, A3C 알고리즘으로 행동 개선&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;build_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;c&quot;&gt;# CNN&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;\
+      &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Flatten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+      &lt;span class=&quot;c&quot;&gt;# DQN 신경망&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;512&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;action_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;전처리&quot;&gt;전처리&lt;/h4&gt;
 &lt;ul&gt;
@@ -230,11 +223,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #5</title><link href="http://localhost:4000/RL_note-5/" rel="alternate" type="text/html" title="RL_note #5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#5</id><content type="html" xml:base="http://localhost:4000/RL_note-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #5</title><link href="http://localhost:4000/RL_note-5/" rel="alternate" type="text/html" title="RL_note #5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#5</id><content type="html" xml:base="http://localhost:4000/RL_note-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -274,13 +263,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;만약 딥살사에서 경험리플레이를 사용한다면?&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;경로의 마지막부터 거꾸로 학습이 된다고 할 때 잘못된 모험을 하여 q함수값이 감소한다면&lt;/li&gt;
-    &lt;li&gt;그 경로 위의 모든 노드는 q함수값이 감소하게 될 것!&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p class=&quot;notice&quot;&gt;만약 딥살사에서 경험리플레이를 사용한다면?&lt;br /&gt;
+경로의 마지막부터 거꾸로 학습이 된다고 할 때 잘못된 모험을 하여 q함수값이 감소한다면&lt;br /&gt;
+그 경로 위의 모든 노드는 q함수값이 감소하게 될 것!&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;심층신경망(model, target_model)
@@ -312,9 +297,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;DQN에서는 target_model과 model 두 가지의 신경망을 이용한다&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p class=&quot;notice&quot;&gt;DQN에서는 target_model과 model 두 가지의 신경망을 이용한다&lt;/p&gt;
 
 &lt;h4 id=&quot;액터-크리틱ac&quot;&gt;액터-크리틱(AC)&lt;/h4&gt;
 &lt;ul&gt;
@@ -371,10 +354,6 @@
           &lt;li&gt;target = (R + ᵧv’)&lt;/li&gt;
           &lt;li&gt;현재 상태(s) 입력, target을 정답으로 신경망 개선&lt;/li&gt;
         &lt;/ul&gt;
-
-        &lt;blockquote&gt;
-          &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-        &lt;/blockquote&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -384,7 +363,7 @@
 
 &lt;h4 id=&quot;남은-문제점&quot;&gt;남은 문제점&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -411,22 +390,19 @@
   &lt;li&gt;케라스에서 인공신경망 구현 코드&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;
-from keras.layers import Dense
-from keras.models import Sequential
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.layers&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;
+  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;
 
-x_train = []
-y_train = []
+  &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
 
-model = Sequential()
-model.add(Dense(12, input_dim=5, activation='sigmoid'))
-model.add(Dense(30, activation='sigmoid'))
-model.add(Dense(1, activation='RMSProp'))
-model.compile(loss='mse', optimizer='RMSProp')
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sigmoid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sigmoid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'RMSProp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mse'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'RMSProp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-model.fit(x_train, y_train, batch_size=32, epoch=1)
-
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epoch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h4 id=&quot;딥살사-이론&quot;&gt;딥살사 이론&lt;/h4&gt;
 &lt;ul&gt;
@@ -462,13 +438,9 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;정책기반 강화학습 vs 가치기반 강화학습&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;정책기반 : 정책에 따라 행동(정책평가가 이루어지지 않으면 최고가치가 존재해도 따라가지 않음)&lt;/li&gt;
-    &lt;li&gt;가치기반 : 최고가치가 최고정책으라는 가정하에 행동&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p class=&quot;notice&quot;&gt;정책기반 강화학습 vs 가치기반 강화학습&lt;br /&gt;
+정책기반 : 정책에 따라 행동(정책평가가 이루어지지 않으면 최고가치가 존재해도 따라가지 않음)&lt;br /&gt;
+가치기반 : 최고가치가 최고정책으라는 가정하에 행동&lt;/p&gt;
 
 &lt;h4 id=&quot;폴리시-그레이디언트&quot;&gt;폴리시 그레이디언트&lt;/h4&gt;
 &lt;ul&gt;
@@ -503,46 +475,28 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;문제
-      &lt;ul&gt;
-        &lt;li&gt;현재 정책에 대한 정답값이 없음&lt;/li&gt;
-        &lt;li&gt;cost의 계산이 불가&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;해결책
-      &lt;ul&gt;
-        &lt;li&gt;각 위치의 가치함수(감가율이 계산된 보상값들의 합) = A&lt;/li&gt;
-        &lt;li&gt;각 위치에서의 행동에 해당하는 정책값 = B&lt;/li&gt;
-        &lt;li&gt;cost = - log(B) * A&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;왜냐하면…
-      &lt;ul&gt;
-        &lt;li&gt;정책신경망 업데이트 방식 : Q = Q + 학습속도*(cost)’&lt;/li&gt;
-        &lt;li&gt;cost = 정책 * q함수 (Richard Sutton의 논문)&lt;/li&gt;
-        &lt;li&gt;cost’ = 정책’ * q함수&lt;/li&gt;
-        &lt;li&gt;cost’ = (정책’/정책) * 가치함수 =&amp;gt;  because. 가치함수 = 정책 ** q함수 (기존식)&lt;/li&gt;
-        &lt;li&gt;cost’ = (log(정책))’ * 가치함수&lt;/li&gt;
-        &lt;li&gt;cost’ = (log(정책))’ * (감가율이 계산된 보상의 합)&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도 문제 해결&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #3</title><link href="http://localhost:4000/RL_note-3/" rel="alternate" type="text/html" title="RL_note #3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#3</id><content type="html" xml:base="http://localhost:4000/RL_note-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;p class=&quot;notice&quot;&gt;문제&lt;br /&gt;
+현재 정책에 대한 정답값이 없음&lt;br /&gt;
+cost의 계산이 불가&lt;br /&gt;&lt;br /&gt;
+해결책&lt;br /&gt;
+각 위치의 가치함수(감가율이 계산된 보상값들의 합) = A&lt;br /&gt;
+각 위치에서의 행동에 해당하는 정책값 = B&lt;br /&gt;
+cost = - log(B) * A&lt;br /&gt;&lt;br /&gt;
+왜냐하면…&lt;br /&gt;
+정책신경망 업데이트 방식 : Q = Q + 학습속도*(cost)’&lt;br /&gt;
+cost = 정책 * q함수 (Richard Sutton의 논문)&lt;br /&gt;
+cost’ = 정책’ * q함수&lt;br /&gt;
+cost’ = (정책’/정책) * 가치함수 =&amp;gt;  because. 가치함수 = 정책 ** q함수 (기존식)&lt;br /&gt;
+cost’ = (log(정책))’ * 가치함수&lt;br /&gt;
+cost’ = (log(정책))’ * (감가율이 계산된 보상의 합)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도 문제 해결&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #3</title><link href="http://localhost:4000/RL_note-3/" rel="alternate" type="text/html" title="RL_note #3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#3</id><content type="html" xml:base="http://localhost:4000/RL_note-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
 &lt;h4 id=&quot;문제점&quot;&gt;문제점&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;환경에 대한 정보부족 문제&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;환경에 대한 정보부족 문제&lt;/li&gt;
+  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -595,13 +549,9 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;입실론 탐욕정책으로 행동하고 그 방향으로 발전(온폴리시)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;원래는 Q = 보상 + 감가율 * 가치함수&lt;/li&gt;
-    &lt;li&gt;탐욕정책으로 인하여 가장 높은 Q함수 = 가치함수&lt;/li&gt;
-    &lt;li&gt;Q = 다음 노드의 보상 + 감가율 * Q’&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p class=&quot;notice&quot;&gt;원래는 Q = 보상 + 감가율 * 가치함수&lt;br /&gt;
+탐욕정책으로 인하여 가장 높은 Q함수 = 가치함수&lt;br /&gt;
+Q = 다음 노드의 보상 + 감가율 * Q’&lt;/p&gt;
 
 &lt;h4 id=&quot;q-learning&quot;&gt;Q-learning&lt;/h4&gt;
 &lt;ul&gt;
@@ -625,14 +575,10 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 
 &lt;h4 id=&quot;남은-문제점&quot;&gt;남은 문제점&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #2</title><link href="http://localhost:4000/RL_note-2/" rel="alternate" type="text/html" title="RL_note #2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#2</id><content type="html" xml:base="http://localhost:4000/RL_note-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #2</title><link href="http://localhost:4000/RL_note-2/" rel="alternate" type="text/html" title="RL_note #2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#2</id><content type="html" xml:base="http://localhost:4000/RL_note-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
 &lt;ul&gt;
@@ -699,28 +645,19 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
   &lt;li&gt;평가시 정책과 상관없이 최대Q함수로 가치 update&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;문제&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Q : 정책 이터레이션도 탐욕정책을 취하기에 가장 큰 Q함수를 가진 방향의 정책만을 취하게 되는데 그러면 가치 이터레이션과 동일하다?&lt;/li&gt;
-    &lt;li&gt;A : 정책 이터레이션은 정책이 명확히 명시되어 있어 그 정책에 따라서만 발전한다.
-하지만 가치 이터레이션은 정책이 명확히 명시되어 있지 않고 최대 Q함수로만 발전된다.&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+&lt;p class=&quot;notice&quot;&gt;Q : 정책 이터레이션도 탐욕정책을 취하기에 가장 큰 Q함수를 가진 방향의 정책만을 취하게 되는데 그러면 가치 이터레이션과 동일하다?&lt;br /&gt;
+A : 정책 이터레이션은 정책이 명확히 명시되어 있어 그 정책에 따라서만 발전한다.&lt;br /&gt;
+하지만 가치 이터레이션은 정책이 명확히 명시되어 있지 않고 최대 Q함수로만 발전된다.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;문제점&quot;&gt;문제점&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;환경에 대한 정보부족 문제&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도가 높다는 문제&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;환경에 대한 정보부족 문제&lt;/li&gt;
+  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #1</title><link href="http://localhost:4000/RL_note-1/" rel="alternate" type="text/html" title="RL_note #1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#1</id><content type="html" xml:base="http://localhost:4000/RL_note-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
+&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #1</title><link href="http://localhost:4000/RL_note-1/" rel="alternate" type="text/html" title="RL_note #1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#1</id><content type="html" xml:base="http://localhost:4000/RL_note-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
 
 &lt;hr /&gt;
 
@@ -850,8 +787,4 @@ model.fit(x_train, y_train, batch_size=32, epoch=1)
 \end{cases}$&lt;/li&gt;
   &lt;li&gt;$v^*(s)	= maxE[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s ]$&lt;/li&gt;
   &lt;li&gt;$q^{*}(s) = E[R + γ max q^* (𝑺_{𝒕+𝟏}, a’) | 𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;이웅원 외 4명 저 ‘파이썬과 케라스로 배우는 강화학습’ 참고&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>

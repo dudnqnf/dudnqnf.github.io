@@ -5,6 +5,8 @@ date: 2018-01-01
 excerpt: "Machine Learning"
 tags:
 - Reinforcement Learning
+ref:
+- http://ishuca.tistory.com/390
 comments: true
 ---
 
@@ -40,4 +42,3 @@ comments: true
 - pip install gym[atari]로 하면 오류남
 
 ---
-> 출처 : http://ishuca.tistory.com/entry/Windows에서-gymatari-설치하기

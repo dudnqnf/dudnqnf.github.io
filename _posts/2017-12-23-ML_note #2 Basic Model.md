@@ -5,6 +5,8 @@ date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
 - Deep Learning
+ref:
+- 밑바닥부터 시작하는 딥러닝
 comments: true
 ---
 # 인공신경망
@@ -25,8 +27,8 @@ comments: true
 
 ## 인공신경망의 추론
 - [ 예측 -> 학습(W와 b의 조정) ] 반복
-- W : 1-> 0.5 -> 0.1 -> 0.05
-- b : 1-> 0.3 -> 0 -> -0.5
+- W : 1-> 0.5 -> 0.1 -> ... -> 0.05
+- b : 1-> 0.3 -> 0 -> ... -> -0.5
 
 ---
 ## 퍼셉트론(신경망)
@@ -37,13 +39,13 @@ comments: true
 자극에 대한 반응을 활성화 시키기 위한 함수<br>
 추후 학습을 위해서 필요
 
-### 계단함수
+#### 계단함수
 $$h(x) =\begin{cases} 0\ (x\le0) \\ 1\ (x\gt0) \end{cases}$$
 
-### sigmoid
+#### sigmoid
 $$h(x) = \frac{1}{1+e^{-x}}$$
 
-### relu
+#### relu
 $$h(x) =\begin{cases} 0\ (x\le0) \\ x\ (x\gt0) \end{cases}$$
 
 ---
@@ -51,11 +53,11 @@ $$h(x) =\begin{cases} 0\ (x\le0) \\ x\ (x\gt0) \end{cases}$$
 ## 출력함수
 마지막 출력되는 값의 형태를 결정해 주는 함수
 
-### 항등함수
+#### 항등함수
 입력과 출력이 같은 함수<br>
 $\sigma(x) = x$
 
-### softmax
+#### softmax
 각 입력값의 확률을 계산하는 함수<br>
 $\sigma(x) = \frac{e^{x}}{\sum_{i=1}^n e^{i}}$
 
@@ -63,16 +65,16 @@ $\sigma(x) = \frac{e^{x}}{\sum_{i=1}^n e^{i}}$
 
 ## Forward Propagation(예측)
 
-### Linear Regression
+#### Linear Regression
 y = Wx + b
 
-### Logistic Classification
+#### Logistic Classification
 y = sigmoid(Wx+b)
 
-### Multinomial Logistic Regression
+#### Multinomial Logistic Regression
 y = softmax(Wx+b)
 
-### Deep Neural Network
+#### Deep Neural Network
 $y_1 = h_1(Wx+b)$ <br>
 $y_2 = h_2(y_1)$ <br>
 ...<br>
@@ -84,37 +86,37 @@ $y_n = h_n(y_{n-1})$
 현재 학습한 모델의 정확도를 측정가능<br>
 학습을 위한 지표
 
-### 평균 제곱 오차 (y = 출력, t = 정답)
+#### 평균 제곱 오차 (y = 출력, t = 정답)
 $$E = \frac12 \sum_k(y-t)$$
 
-### 교차 엔트로피 오차
+#### 교차 엔트로피 오차
 $$E = -\sum_kt\ log(y)$$
 
 ---
 
 ## Back Propagation(학습)
 
-### 편미분 계산
+#### 편미분 계산
 - $y = x_1 + x_2$ 일때 $\frac{dy}{dx_1} = 1,\ \frac{dy}{dx_2} = 1$
 - $y = x_1 * x_2$ 일때 $\frac{dy}{dx_1} = x_2,\ \frac{dy}{dx_2} = x_1$
 
-### 미분 연쇄
+#### 미분 연쇄
 - $\frac{dz}{dx} = \frac{dz}{dy} * \frac{dy}{dx}$
 
-### Affine transformation(행렬 내적) 미분
+#### Affine transformation(행렬 내적) 미분
 - Y = WX 일때 $\frac{dY}{dX}=W^T, \frac{dY}{dW} = X^T$
 
-### 행렬 내적 미분 연쇄
+#### 행렬 내적 미분 연쇄
 - $\frac{dL}{dX} = \frac{dL}{dY} * \frac{dY}{dX} = \frac{dL}{dY} * W^T$
 - $\frac{dL}{dW} = \frac{dY}{dW} * \frac{dL}{dY} = X^T * \frac{dL}{dY}$
 
-### Regression
+#### Regression
 - 층마다 활성화함수 포함
 - 출력함수 : 항등함수
 - 손실함수 : 평균 제곱 오차
 - 출력함수 + 손실함수 미분값 : y-t
 
-### Classification
+#### Classification
 - 층마다 활성화함수 포함
 - 출력함수 : softmax
 - 손실함수 : 교차 엔트로피 오차

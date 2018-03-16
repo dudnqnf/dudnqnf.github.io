@@ -5,6 +5,9 @@ date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
 - Deep Learning
+ref:
+- 김성훈 교수님의 온라인 강의 및 논문
+- 밑바닥부터 시작하는 딥러닝
 comments: true
 ---
 # Convolutional Neural Network(CNN)
@@ -71,5 +74,3 @@ comments: true
 #### 질문
 - 그림 또는 필터의 depth는 어떤 의미가 있는가?
 - 그림도 3차원이고 필터도 3차원인데 어떻게 행렬곱을 하는가?
-
-> 김성훈 교수님의 온라인 강의 및 논문 참고
