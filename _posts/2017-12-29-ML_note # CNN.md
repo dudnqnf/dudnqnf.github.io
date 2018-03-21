@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ML_note #CNN-1(미완성)"
+title: "ML_note #CNN"
 date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
@@ -69,7 +69,7 @@ relu는 선택<br>
   - input : arr = (10, 300) # 배치사이즈, 채널 * 행 * 열
   - W : arr = (300, 2)
   - output : arr = (10, 2) # 배치사이즈, output개수
-- softmax
+- layer10(softmax)
   - 각각의 output에 대해서 softmax함수 적용
 
 **TIP**<br>
@@ -78,3 +78,9 @@ filter의 개수 = 출력데이터의 채널<br>
 {: .notice}
 
 #### 학습 (BackProp)
+- layer10(softmax  + cross_entropy) : 미분값 = y - t
+- layer9(Affine) : 행열내적 미분과 동일
+- ...
+- layer3(pooling) : 학습에 관여 안함
+- layer2(relu) : 미분값 = 0 or 1
+- layer1(conv) : 행열내적 미분과 동일

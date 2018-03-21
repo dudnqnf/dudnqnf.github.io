@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-19T01:28:26+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T09:26:29+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -787,4 +787,29 @@ A : 정책 이터레이션은 정책이 명확히 명시되어 있어 그 정책
 \end{cases}$&lt;/li&gt;
   &lt;li&gt;$v^*(s)	= maxE[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s ]$&lt;/li&gt;
   &lt;li&gt;$q^{*}(s) = E[R + γ max q^* (𝑺_{𝒕+𝟏}, a’) | 𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]$&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN-1(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN-1(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;rnn&quot;&gt;RNN&lt;/h1&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;recurrent-neural-networkrnn&quot;&gt;Recurrent Neural Network(RNN)&lt;/h1&gt;
+
+&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;출력값이 다시 입력으로 들어가는 형태의 DNN&lt;/li&gt;
+  &lt;li&gt;시계열 예측, 문자 인식 기술에 좋은 성과를 보이고 있는 알고리즘&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;간단한-rnn구조&quot;&gt;간단한 RNN구조&lt;/h4&gt;
+&lt;p&gt;$h_t = φ(Wx_t + Uh_{t-1})$&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;$x_t$ = 입력&lt;/li&gt;
+  &lt;li&gt;$W$ = 가중치&lt;/li&gt;
+  &lt;li&gt;$U$ = 전이계수&lt;/li&gt;
+  &lt;li&gt;$φ$ = 활성화함수(tanh, sigmoid)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;lstmlong-short-term-memory-units&quot;&gt;LSTM(Long Short Term Memory Units)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;현재 가장 널리 쓰이고 있는 RNN구조&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;학습-backprop&quot;&gt;학습 (BackProp)&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;BPTT(Backpropagation Through Time) : 시간을 거슬러 올라가며 backprop&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
