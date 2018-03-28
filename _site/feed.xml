@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-21T09:26:29+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-03-27T22:53:54+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -787,29 +787,47 @@ A : 정책 이터레이션은 정책이 명확히 명시되어 있어 그 정책
 \end{cases}$&lt;/li&gt;
   &lt;li&gt;$v^*(s)	= maxE[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s ]$&lt;/li&gt;
   &lt;li&gt;$q^{*}(s) = E[R + γ max q^* (𝑺_{𝒕+𝟏}, a’) | 𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]$&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #RNN(미완성)</title><link href="http://localhost:4000/ML_note-RNN/" rel="alternate" type="text/html" title="ML_note #RNN(미완성)" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20RNN</id><content type="html" xml:base="http://localhost:4000/ML_note-RNN/">&lt;h1 id=&quot;recurrent-neural-networkrnn&quot;&gt;Recurrent Neural Network(RNN)&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #6 딥러닝의 활용</title><link href="http://localhost:4000/ML_note-After_NN/" rel="alternate" type="text/html" title="ML_note #6 딥러닝의 활용" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20After_NN</id><content type="html" xml:base="http://localhost:4000/ML_note-After_NN/">&lt;h1 id=&quot;딥러닝의-활용&quot;&gt;딥러닝의 활용&lt;/h1&gt;
 
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;h4 id=&quot;사물검출&quot;&gt;사물검출&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;출력값이 다시 입력으로 들어가는 형태의 DNN&lt;/li&gt;
-  &lt;li&gt;시계열 예측, 문자 인식 기술에 좋은 성과를 보이고 있는 알고리즘&lt;/li&gt;
+  &lt;li&gt;R-CNN&lt;/li&gt;
+  &lt;li&gt;이미지의 변형 및 분류에 SVM을 이용&lt;/li&gt;
+  &lt;li&gt;Selective Search 기법을 사용&lt;/li&gt;
+  &lt;li&gt;후보 영역 추출까지 CNN으로 처리하는 Faster R-CNN기법도 등장&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;간단한-rnn구조&quot;&gt;간단한 RNN구조&lt;/h4&gt;
-&lt;p&gt;$h_t = φ(Wx_t + Uh_{t-1})$&lt;/p&gt;
+&lt;h4 id=&quot;분할&quot;&gt;분할&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;$x_t$ = 입력&lt;/li&gt;
-  &lt;li&gt;$W$ = 가중치&lt;/li&gt;
-  &lt;li&gt;$U$ = 전이계수&lt;/li&gt;
-  &lt;li&gt;$φ$ = 활성화함수(tanh, sigmoid)&lt;/li&gt;
+  &lt;li&gt;이미지 분류를 픽셀 수준에 적용&lt;/li&gt;
+  &lt;li&gt;FCN(Fully Convolutional Network)를 이용&lt;/li&gt;
+  &lt;li&gt;합성곱 계층만으로 구성된 네트워크&lt;/li&gt;
+  &lt;li&gt;FCN의 마지막에 수행하는 확대는 이중 선형 보간에 의한 선형 확대&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;lstmlong-short-term-memory-units&quot;&gt;LSTM(Long Short Term Memory Units)&lt;/h4&gt;
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;_완전 연결 계층에서는 출력이 모든 입력과 연결됩니다. 이와 같은 구성을 합성곱 계층으로도 구현할 수 있습니다. 가령 입력 크기가 32 * 10 * 10(채널32개, 높이 10, 너비 10)인 데이터에 대한 완전연결 계층은 필터 크기가 32 * 10 * 10인 합성곱 게층으로 대체할 수 있습니다. 만약, 완전연결 계층의 출력 노드가 100개라면 합성곱 계층에서는 기존의 32 * 10 * 10필터를 100개 준비하면 완전히 같은 처리를 할 수 있습니다. 이처럼 완전연결 계층은 같은 일을 수행하는 합성곱 계층으로 대체할 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;사진-캡션-생성&quot;&gt;사진 캡션 생성&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;현재 가장 널리 쓰이고 있는 RNN구조&lt;/li&gt;
+  &lt;li&gt;NIC(Neural Image Caption)모델이 대표적&lt;/li&gt;
+  &lt;li&gt;CNN과 RNN의 조합으로 구성&lt;/li&gt;
+  &lt;li&gt;사진이나 자연어와 같은 여러 정보를 조합 처리하는 것을 멀티모달 처리라고 함&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;학습-backprop&quot;&gt;학습 (BackProp)&lt;/h4&gt;
+&lt;h4 id=&quot;이미지-스타일화풍-변환&quot;&gt;이미지 스타일(화풍) 변환&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;BPTT(Backpropagation Through Time) : 시간을 거슬러 올라가며 backprop&lt;/li&gt;
+  &lt;li&gt;&lt;a neural=&quot;&quot; algorithm=&quot;&quot; of=&quot;&quot; artistic=&quot;&quot; style=&quot;&quot;&gt; 논문&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;이미지-생성&quot;&gt;이미지 생성&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;DCGAN(Deep Convolutional Generative Adversarial Network) 기법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;GAN&lt;/strong&gt;&lt;br /&gt;
+…&lt;/p&gt;
+
+&lt;h4 id=&quot;자율-주행&quot;&gt;자율 주행&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;SegNet이라는 CNN 기반 신경망&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>

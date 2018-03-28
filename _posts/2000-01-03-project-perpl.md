@@ -6,7 +6,6 @@ category: Android MobileApp
 position: 서버 개발
 project: true
 comments: true
-
 ---
 
 ![Homepage Img](../assets/img/project/perpl0.png)
@@ -14,17 +13,19 @@ comments: true
 ---
 
 
-
 ## 개요
-* 근무처 : Tacademy 팀프로젝트
-* 발주처 :
-* 역할 : 서버개발 및 안드로이드 보조
-* 앱 설명 : 길거리 아티스트 소개 어플
-* 개발상세내역 :
-* 앱에 필요한 기본적인 서비스구현
-* 동영상 업로드, 편집 기능 개발
-* URL :
-* 비고 : 개발완료는 하였지만 서비스는 하지않음
+- 분류 : Tacademy 팀프로젝트
+- 소개 : 길거리 아티스트 소개 (안드로이드 어플리케이션)
+- 개발인원 : 5명
+- 역할 : 서버 개발, 안드로이드 보조개발
+- 개발기술 :
+	- Front-end : java(android)
+	- Back-end : nodejs
+- 개발상세내역 :
+  - 서버 환경세팅 및 데이터베이스 설계
+  - nodejs를 통해 android와 json통신하는 부분 개발
+  - push서버, 동영상 업로드/편집 기능 등 개발
+  - 개발은 완료하였으나 서비스는 하지않음
 
 ## Preview
 

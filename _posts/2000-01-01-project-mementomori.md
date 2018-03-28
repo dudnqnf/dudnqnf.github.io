@@ -14,11 +14,12 @@ comments: true
 
 ---
 
+
 ## 개요
-* 근무처 : TrendTok
-* 발주처 : 메멘토모리
-* 개발인원 : 3명
-* 역할 : 퍼블리싱
-* 상세내역 : 레이아웃(HTML, CSS) 수정 및 제작
-* 비고 : 제작보조
-* 홈페이지 : [MEMENTOMORI](http://mementomori.co.kr/)
+- 근무처 : TrendTok
+- 소개 : Mementomori 쇼핑몰
+- 개발인원 : 4명
+- 역할 : 퍼블리싱
+- 개발기술 : HTML, CSS
+- 상세내역
+  - WebURL : [MEMENTOMORI](http://mementomori.co.kr/)

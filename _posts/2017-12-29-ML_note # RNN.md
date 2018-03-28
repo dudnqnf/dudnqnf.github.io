@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "ML_note #RNN(미완성)"
+title: "ML_note #5 RNN(작성중)"
 date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
 - Deep Learning
 refs:
 - https://deeplearning4j.org/kr/lstm
+- https://github.com/WegraLee/deep-learning-from-scratch
 comments: true
 ---
 # Recurrent Neural Network(RNN)

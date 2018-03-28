@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ML_note #CNN"
+title: "ML_note #4 CNN"
 date: 2017-12-22
 excerpt: "Machine Learning"
 tags:
@@ -8,6 +8,7 @@ tags:
 ref:
 - 김성훈 교수님의 온라인 강의 및 논문
 - 밑바닥부터 시작하는 딥러닝
+- https://github.com/WegraLee/deep-learning-from-scratch
 comments: true
 ---
 # Convolutional Neural Network(CNN)
@@ -84,3 +85,27 @@ filter의 개수 = 출력데이터의 채널<br>
 - layer3(pooling) : 학습에 관여 안함
 - layer2(relu) : 미분값 = 0 or 1
 - layer1(conv) : 행열내적 미분과 동일
+
+**im2col**<br>
+행렬을 내적하기 좋은 행태로 변형할 때 자주 사용되는 함수. 입력데이터는 배치데이터 하나당 가로로 한 줄, 필터셋은 필터 하나당 세로로 한 줄(필터 하나를 여러번 곱해서 길게 만든 한 줄). 내적을 하여 출력데이터(2차원)를 생성하고 reshape을 출력데이터 생성.
+{: .notice}
+
+#### 대표적인 CNN
+- LeNet
+  - 손글씨 숫자를 인식하는 네트워크
+  - 20년전에 처음 제안된 CNN
+  - LeNet에서 이용되는 sigmoid함수와 서브샘플링은 현재 ReLU와 최대 풀링으로 대체되어 이용됨
+
+- AlexNet
+  - 활성화 함수로 ReLU를 이용
+  - LRN이라는 국소적 정규화를 실시하는 계층을 이용
+  - 드롭아웃을 사용
+
+- VGG
+- GoogleLeNet
+- ResNet
+- ...
+
+#### 정확도 향상
+- 데이터 확장 : 데이터의 개수가 부족할 때 한 개의 데이터를 회전 및 이동을 통해서 다양한 데이터 셋을 만들어 낼 수 있음
+- 다층구조 : 한 번에 큰 필터를 적용하여 연산 하는 것보다 작은 필터를 여러번 연산하는 것이 연산량이 적음
