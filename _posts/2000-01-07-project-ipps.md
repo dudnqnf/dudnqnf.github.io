@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "IPPS with DQN"
-date:   2016-01-01
-category: Intergrated Process Planning and Scheduling with Reinforcement
+title:  "IPPS"
+date: 2016-01-01
+category: Intergrated Process Planning and Scheduling
 position: 연구생
 project: true
 comments: true
@@ -10,7 +10,7 @@ comments: true
 
 ## 개요
 - 근무처 : Hongik Univ. Ha Jung-hun's LAB.
-- 소개 : 통합생산 계획 최적화
+- 소개 : 통합생산 계획 최적화(Intergrated Process Planning and Scheduling)
 - 개발인원 : 1명
 - 역할 : 학부연구생
 - 연구기술 :
