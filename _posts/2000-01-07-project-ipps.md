@@ -10,7 +10,7 @@ comments: true
 
 ## 개요
 - 근무처 : Hongik Univ. Ha Jung-hun's LAB.
-- 소개 : 통합생산 계획 최적화(Intergrated Process Planning and Scheduling)
+- 소개 : 통합생산 계획 최적화(Integrated Process Planning and Scheduling)
 - 개발인원 : 1명
 - 역할 : 학부연구생
 - 연구기술 :
