@@ -8,12 +8,6 @@ project: true
 comments: true
 ---
 
-<br>  
-![Homepage Img](../assets/img/project/sportsfactory1.jpg)  
-<br>
-
----
-
 ## 개요
 - 근무처 : Hongik Univ. Ha Jung-hun's LAB.
 - 소개 : 통합생산 계획 최적화
