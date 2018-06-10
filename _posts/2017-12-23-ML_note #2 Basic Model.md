@@ -92,7 +92,7 @@ y = 출력, t = 정답
 $$E = \frac12 \sum_k(y-t)$$
 
 #### Convex 오차
-$$E = \begin{cases} -log(y)\ (if\ \ t = 1) \\ -log(1 - y)\ (if\ \ t = 0) \end{cases}$$
+$$E = \begin{cases} -log(y)\ (if\ \ t = 1) \\ -log(1 - y)\ (if\ \ t = 0) \end{cases}$$ </br>
 $$ = -tlog(y) - (1-t)log(1-y)$$
 
 #### 교차 엔트로피 오차
