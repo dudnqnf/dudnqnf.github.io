@@ -30,4 +30,3 @@ comments: true
 ../assets/img/project/diple3.png
 ../assets/img/project/diple4.png
 {% endcapture %}
-{% include gallery images=images caption="모바일웹, 하이브리드웹앱" cols=3 %}
