@@ -34,3 +34,4 @@ comments: true
 ../assets/img/project/perpl3.png
 ../assets/img/project/perpl5.png
 {% endcapture %}
+{% include gallery images=images caption="모바일웹, 하이브리드웹앱" cols=3 %}

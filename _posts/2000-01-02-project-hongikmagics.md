@@ -2,8 +2,8 @@
 layout: post
 title:  "MAGICS"
 date:   2016-01-01
-category: Web, MobileWeb, Hybrid MobileApp
-position: ALL
+category: Web / Hybrid MobileApp
+position: 웹, 서버, 안드로이드 개발
 project: true
 comments: true
 ---

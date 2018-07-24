@@ -2,7 +2,7 @@
 layout: post
 title:  "IPPS"
 date: 2016-01-01
-category: Intergrated Process Planning and Scheduling
+category: Intergrated Process Planning and Scheduling 연구
 position: 연구생
 project: true
 comments: true

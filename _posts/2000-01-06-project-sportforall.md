@@ -2,8 +2,8 @@
 layout: post
 title:  "운동생활"
 date:   2016-01-01
-category: Hybrid MobileApp
-position: 안드로이드, 웹, 서버 개발
+category: Web / Hybrid MobileApp
+position: 웹, 서버, 안드로이드 개발
 project: true
 comments: true
 ---

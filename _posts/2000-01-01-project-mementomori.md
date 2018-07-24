@@ -3,7 +3,7 @@ layout: post
 title:  "Mementomori"
 date:   2016-01-01
 category: Web
-position: 퍼블리싱
+position: 웹 개발
 project: true
 comments: true
 ---
