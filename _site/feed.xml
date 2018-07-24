@@ -1,4 +1,642 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-25T21:05:44+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-24T14:38:44+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 Selenium</title><link href="http://localhost:4000/AWS_EC2_Selenium/" rel="alternate" type="text/html" title="AWS/EC2 Selenium" /><published>2018-07-16T00:00:00+09:00</published><updated>2018-07-16T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Selenium</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Selenium/">&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;p&gt;https://christopher.su/2015/selenium-chromedriver-ubuntu/&lt;/p&gt;
+
+&lt;h4 id=&quot;트러블-이슈&quot;&gt;트러블 이슈…&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;기본적으로 Logging으로 확인&lt;/li&gt;
+  &lt;li&gt;selenium 버전문제&lt;/li&gt;
+  &lt;li&gt;webdriver 접근문제&lt;/li&gt;
+  &lt;li&gt;(beautifulsoup4) html5lib -&amp;gt; lxml&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">AWS/EC2 Django diploy</title><link href="http://localhost:4000/AWS_EC2_Django/" rel="alternate" type="text/html" title="AWS/EC2 Django diploy" /><published>2018-07-12T00:00:00+09:00</published><updated>2018-07-12T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Django</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Django/">&lt;h4 id=&quot;aws-서버세팅&quot;&gt;AWS 서버세팅&lt;/h4&gt;
+&lt;p&gt;… 이전글 참조&lt;/p&gt;
+
+&lt;h4 id=&quot;과정&quot;&gt;과정&lt;/h4&gt;
+&lt;p&gt;https://lhy.kr/ec2-ubuntu-deploy&lt;/p&gt;
+
+&lt;h4 id=&quot;트러블-이슈&quot;&gt;트러블 이슈…&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# z-shell은 선택이나 PATH설정 해주는 부분은 개인적으로 찾아서...
+
+# uWSGI작동확인
+uwsgi \
+--http :(port) \
+--home (virtualenv경로) \
+--chdir &amp;lt;django프로젝트 경로&amp;gt; \
+-w &amp;lt;설정 패키지명&amp;gt;.wsgi
+&amp;lt;설정 패키지명&amp;gt; -&amp;gt; 장고 프로젝트 안의 wsgi파일 위치
+
+
+
+
+# Nginx 서비스 파일 안만들면 작동 안함
+(uwsgi.service는 과정안에 들어가 있음)
+# /etc/systemd/system/Nginx.service
+[Unit]
+Description=The NGINX HTTP and reverse proxy server
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+# Nginx 가상서버 설정 파일 작성
+uwsgi_pass = unix:///tmp/server.sock
+=&amp;gt; tmp 파일에 넣으면 읽지를 못함
+=&amp;gt; run 파일로 변경(이 두가지 파일 전부)
+/etc/nginx/sites-available/server.conf
+/프로젝트 디렉토리.../uwsgi.ini
+
+
+# 나머지 트러블 이슈...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;django-logging-ec2&quot;&gt;Django Logging (EC2)&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# settings.py
+# LOG_DIR 는 접근이 가능해야 하므로 chmod나 chown 설정 변경해줘야 됨
+
+LOG_DIR = '/var/log'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    'formatters': {
+        'django.server': {
+            'format': '[%(asctime)s] %(message)s',
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+        },
+        'file_error': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'level': 'ERROR',
+            'formatter': 'django.server',
+            'backupCount': 10,
+            'filename': os.path.join(LOG_DIR, 'django_error.log'),
+            'maxBytes': 10485760,
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file_error'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    }
+}
+
+
+# views.py
+# 기본적인 로그가 찍히기는 하나...
+# Exception으로 처리해줌
+import logging
+
+logger = logging.getLogger(&quot;django&quot;)
+  	try:
+  		...
+  	except Exception as e:
+  		logger.error(e)
+  		...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Django</title><link href="http://localhost:4000/Django/" rel="alternate" type="text/html" title="Django" /><published>2018-07-10T00:00:00+09:00</published><updated>2018-07-10T00:00:00+09:00</updated><id>http://localhost:4000/Django</id><content type="html" xml:base="http://localhost:4000/Django/">&lt;h4 id=&quot;프로젝트-구조&quot;&gt;프로젝트 구조&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 프로젝트 생성
+# Command
+django-admin startproject mysite
+
+
+# 세팅변경
+# mysite/settings.py
+TIME_ZONE = 'Asia/Seoul'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.pythonanywhere.com']
+
+DATABASES = {
+  'default': {
+      'ENGINE': 'django.db.backends.sqlite3',
+      'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+  }
+}
+
+# 데이터베이스를 생성
+# Command
+python manage.py migrate
+
+# 서버 실행
+python manage.py runserver
+
+# 어플리케이션 생성
+python manage.py startapp blog
+
+# 세팅에 블로그 추가
+# mysite/settings.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'blog',
+]
+
+# 블로그 글 모델 생성
+# blog/models.py
+from django.db import models
+from django.utils import timezone
+
+class Post(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    published_date = models.DateTimeField(
+            blank=True, null=True)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
+
+# migration 생성
+# Command
+python manage.py makemigrations blog
+
+# migration 적용
+# Command
+python manage.py migrate blog
+
+# 장고 관리자
+# blog/admin.py
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+
+# Command
+python manage.py migrate
+
+# SuperUser 생성
+# Command
+python manage.py createsuperuser
+
+# 장고 URL
+# mysite/urls.py
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'', include('blog.urls')),
+]
+
+# blog/urls.py
+# 새로생성
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+    url(r'^$', views.post_list, name='post_list'),
+]
+
+
+# blog/views.py
+from django.shortcuts import render
+def post_list(request):
+  return render(request, 'blog/post_list.html', {})
+
+# blog/templates/blog/post_list.html
+# templates 디렉토리, blog 디렉토리, post_list.html 파일 새로 생성
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;It works!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;장고-쉘&quot;&gt;장고 쉘&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Command
+python manage.py shell
+
+# 객체조회
+from blog.models import Post
+Post.objects.all()
+
+# 객체생성
+from django.contrib.auth.models import User
+User.objects.all()
+me = User.objects.get(username='user')
+Post.objects.create(author=me, title='Sample title', text='Test')
+
+# 필터
+Post.objects.filter(author=me)
+Post.objects.filter(title__contains='title')
+
+# publish 후 필터
+post = Post.objects.get(title=&quot;Sample title&quot;)
+post.publish()
+from django.utils import timezone
+Post.objects.filter(published_date__lte=timezone.now())
+
+# 정렬
+Post.objects.order_by('created_date')
+
+# Chaining
+Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;템플릿-동적-데이터&quot;&gt;템플릿 동적 데이터&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# blog/views.py
+from django.shortcuts import render
+from django.utils import timezone
+from .models import Post
+
+def post_list(request):
+posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+return render(request, 'blog/post_list.html', {'posts': posts})
+
+# blog/templates/blog/post_list.html
+&amp;lt;div&amp;gt;
+    &amp;lt;h1&amp;gt;&amp;lt;a href=&quot;/&quot;&amp;gt;Django Girls Blog&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;
+&amp;lt;/div&amp;gt;
+
+{% for post in posts %}
+    &amp;lt;div&amp;gt;
+        &amp;lt;p&amp;gt;published: &amp;lt;/p&amp;gt;
+        &amp;lt;h1&amp;gt;&amp;lt;a href=&quot;&quot;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h1&amp;gt;
+        &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+{% endfor %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;정적-파일&quot;&gt;정적 파일&lt;/h4&gt;
+&lt;p&gt;{% highlight python %}
+    # blog/static/css/blog.css
+    # 파일생성
+    h1 a {
+        color: #FCA205;
+    }&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# blog/templates/blog/post_list.html
+{% load staticfiles %}
+&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;{% static 'css/blog.css' %}&quot;&amp;gt; {% endhighlight %}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;템플릿-확장&quot;&gt;템플릿 확장&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# post_list.html
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for post in posts %}
+        &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;
+        &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;
+        &amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;
+{% endfor %}
+{% endblock %}
+
+# base.html
+&amp;lt;body&amp;gt;
+  {% block content %}
+  {% endblock %}
+&amp;lt;/body&amp;gt;
+
+# !호출은 그대로 post_list.html 호출해 주면 됨
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;mysql-연동&quot;&gt;Mysql 연동&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Command
+pip install Mysqlclient
+
+# 오류 난다면 여기로 들어가서 직접 다운로드(python 버전(cp), 파이썬 비트(win))
+https://www.lfd.uci.edu/~gohlke/pythonlibs/#mysqlclient
+
+# Command
+pip install {다운 받은 whl 파일 이름}
+
+# settings.py
+DATABASES = {
+    'default':{
+        'ENGINE':'django.db.backends.mysql',
+        'NAME':'database_name',
+        'USER':'user_name',
+        'PASSWORD':'user_password',
+        'HOST':'host.com',
+        'PORT':'3306',
+    }
+}
+
+# 적용
+# Command
+python manage.py migrate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Django" /></entry><entry><title type="html">Javascript</title><link href="http://localhost:4000/Javascript/" rel="alternate" type="text/html" title="Javascript" /><published>2018-07-05T00:00:00+09:00</published><updated>2018-07-05T00:00:00+09:00</updated><id>http://localhost:4000/Javascript</id><content type="html" xml:base="http://localhost:4000/Javascript/">&lt;h4 id=&quot;basic-javascript&quot;&gt;Basic Javascript&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 변수
+  var a, b;
+
+// 변수에 함수대입
+  var c = function(){
+    ...
+  }
+
+// 함수(=객체)
+  function func(){}
+  func();
+  // window 생략가능
+  window.func();
+
+// 객체
+  a = {}
+  b = {
+    a : 1,
+    b : function(){
+      alert('');
+    }
+  }
+
+// 인스턴스 생성
+  a = new func();
+
+// 클로져
+
+// 함수 즉시호출
+  (function func(){
+    ...
+  }())
+
+// 전역 객체의 함수호출
+  window.func();
+
+
+// 객체의 함수
+  instance.func();
+  window.instance.func();
+  ---&amp;gt; Instance.func 호출시 this == Instance
+
+
+// o1호출(전역)과 o2호출 차이
+  function func(){}
+  var o1 = func();
+  var o2 = new func();
+
+
+// apply, call
+  var o = {}
+  var p = {}
+  function func(){
+      switch(this){
+          case o:
+              document.write('o&amp;lt;br /&amp;gt;');
+              break;
+          case p:
+              document.write('p&amp;lt;br /&amp;gt;');
+              break;
+          case window:
+              document.write('window&amp;lt;br /&amp;gt;');
+              break;          
+      }
+  }
+  func();
+  func.apply(o);
+  func.apply(p);
+
+
+// 리터럴
+  a = [1,2,3]
+  a = new array(1,2,3)
+
+  Function b(x, y) = { return x + y }
+  b = new Function('x', 'y', 'return x+y')
+
+  c = {}
+  c = new Object()
+
+// 프로토타입
+  // 모든 객체는 프로토타입이 존재
+  function Person(name){
+      this.name = name;
+  }
+  Person.prototype.name=null;
+  Person.prototype.introduce = function(){
+      return 'My name is '+this.name;
+  }
+
+  function Programmer(name){
+      this.name = name;
+  }
+  Programmer.prototype = new Person();
+  Programmer.prototype.coding = function(){
+      return &quot;hello world&quot;;
+  }
+
+  var p1 = new Programmer('egoing');
+  document.write(p1.introduce()+&quot;&amp;lt;br /&amp;gt;&quot;);
+  document.write(p1.coding()+&quot;&amp;lt;br /&amp;gt;&quot;);
+
+  // 객체 함수 정의는 프로토 타입에(객체.prototype.함수 = function(){})
+  // 객체 함수 호출은 객체.함수
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;ecmascript2016&quot;&gt;ECMAScript2016&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// Class
+  class Person {
+      constructor (id, name) {
+          this.id = id
+          this.name = name
+      }
+      toString() {
+          return `(${this.id}, ${this.name})`
+      }
+  }
+
+  class Student extends Person {
+      constructor (id, name, age) {
+          super(id, name)
+          this.age = age
+      }
+      toString() {
+          return super.toString() + ' and ' + this.age
+      }
+  }
+
+// let&amp;amp;const
+  const schoolName = &quot;ABC&quot;
+  schoolName = &quot;CBA&quot;  // Error
+  // 호이스팅이 사라짐
+  function test() {
+    let x = &quot;a&quot;
+    if (true) {
+      let x = &quot;b&quot;
+      console.log(x);  // b
+    }
+    console.log(x);  // a
+  }
+
+// Arrow Functions
+  const squares = [1, 2, 3].map(x =&amp;gt; x * x) // 1, 4, 9
+
+  // this에 대한 이전코드
+  function NumberEx() {
+    var that = this
+    that.num = 0;
+    setInterval(function add() {
+      // setInterval 안에서의 this 는 NumberEx의 this가 아니므로 다른 변수에 this 를 지정하여 씁니다.
+      that.num++;
+      console.log(that.num);
+    }, 1000);
+  }
+
+  // this에 대한 바뀐코드
+  function NumberEx() {
+    this.num = 0
+
+    setInterval(() =&amp;gt; {
+      this.num++ // this is from NumberEx
+    }, 1000)
+  }
+
+// module
+  // utility.js
+  export const squares = (arr) =&amp;gt; { return arr.map(x =&amp;gt; x * x) }
+
+  // math.js
+  import { squares } from &quot;utility&quot;
+  console.log(squares([1,2,3])) // [1,4,9]
+
+
+// Promises
+var promiseTest = (num) =&amp;gt; {
+  return new Promise((resolve, reject) =&amp;gt; {
+      if (num &amp;gt; 3) {
+          resolve(num)
+      } else {
+          reject(&quot;err&quot;)
+      }
+  }
+}
+
+promiseTest(5)
+  .then(val =&amp;gt; console.log(val)) // 5
+  .catch(err =&amp;gt; console.log(err))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Language" /></entry><entry><title type="html">Ubuntu_pyenv</title><link href="http://localhost:4000/Ubuntu_pyenv/" rel="alternate" type="text/html" title="Ubuntu_pyenv" /><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><id>http://localhost:4000/Ubuntu_pyenv</id><content type="html" xml:base="http://localhost:4000/Ubuntu_pyenv/">&lt;h4 id=&quot;pyenv&quot;&gt;pyenv&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev
+
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+# path 설정
+vi ~/.bashrc
+export PATH = $PATH:/home:/var
+export PATH=&quot;/root/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+source ~/.bashrc
+
+# pyenv 가상환경 만들기
+pyenv install --list
+pyenv install 3.6.4
+pyenv global 3.6.4
+pyenv versions
+
+# pyenv 가상환경 적용
+pyenv virtualenv 3.6.4 sample-env
+pyenv local sample-env
+pyenv shell uwsgi-env
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">AWS/EC2 Server Setting</title><link href="http://localhost:4000/AWS_EC2_Server_Setting/" rel="alternate" type="text/html" title="AWS/EC2 Server Setting" /><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Server_Setting</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Server_Setting/">&lt;h4 id=&quot;aws-가입&quot;&gt;AWS 가입&lt;/h4&gt;
+&lt;h4 id=&quot;ec2-인스턴스-생성&quot;&gt;EC2 인스턴스 생성&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ubuntu Server 14.04 LTS (HVM)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;puttyputtygenpageant-설치&quot;&gt;putty/puttygen/pageant 설치&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;puttygenpageant&quot;&gt;puttygen/pageant&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;public_key / private_key 생성&lt;/li&gt;
+  &lt;li&gt;EC2 키페어에 public_key 등록&lt;/li&gt;
+  &lt;li&gt;pageant : private_key 등록&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;putty&quot;&gt;putty&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;public DNS or public IP&lt;/li&gt;
+  &lt;li&gt;connection -&amp;gt; SSH -&amp;gt; Auth 에서 private_key 등록(pageant 있으면 안해도 되는듯 함)&lt;/li&gt;
+  &lt;li&gt;접속&lt;/li&gt;
+  &lt;li&gt;user_id : ubuntu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mysql&quot;&gt;mysql&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# mysql 설치
+apt-get update
+apt-get install mysql-server
+
+# mysql 접속
+select host, user, password from user;
+GRANT ALL PRIVILEGES ON *.* TO '계정명'@'%';
+FLUSH PRIVILEGES;
+
+# mysql 외부접속 설정변경
+vim /etc/mysql/my.cnf
+bind-address = 0.0.0.0
+service mysqld restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;EC2 인바운드 규칙 변경&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;pyenv-설치&quot;&gt;pyenv 설치&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev
+
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+# path설정
+vi ~/.bashrc
+export PATH = $PATH:/home:/var
+export PATH=&quot;/root/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+source ~/.bashrc
+
+pyenv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -223,611 +861,4 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #5</title><link href="http://localhost:4000/RL_note-5/" rel="alternate" type="text/html" title="RL_note #5" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#5</id><content type="html" xml:base="http://localhost:4000/RL_note-5/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;카트폴 문제를 DQN과 AC로 풀기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;카트폴-문제&quot;&gt;카트폴 문제&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;OpenAI GYM에 있는 예제&lt;/li&gt;
-      &lt;li&gt;카트 위에 달려있는 폴이 한쪽으로 쓰러지지 않게 카트를 계속해서 움직이는 게임&lt;/li&gt;
-      &lt;li&gt;에이전트 상태 = [x, x’, θ, θ’] &lt;br /&gt;(x : 카트 위치, x’ : 카트 속도, θ : 폴 기운 각도, θ’ : 폴 각속도)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;해결전략 : DQN, AC&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;딥큐러닝dqn&quot;&gt;딥큐러닝(DQN)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;Q-learning + DNN&lt;/li&gt;
-      &lt;li&gt;인공신경망을 통해 Q함수 근사&lt;/li&gt;
-      &lt;li&gt;딥살사와 동일하나 행동한 곳이 아닌 최대 Q함수로의 update ( 살사와 Q-learning의 차이 )&lt;/li&gt;
-      &lt;li&gt;경험리플레이를 사용&lt;/li&gt;
-      &lt;li&gt;행동 -&amp;gt; 행동 -&amp;gt; 행동 -&amp;gt; … -&amp;gt; 행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; 개선 -&amp;gt; …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;경험리플레이
-    &lt;ul&gt;
-      &lt;li&gt;이동경로를 기억해 놨다가 쌓이면 랜덤으로 꺼내서 개선&lt;/li&gt;
-      &lt;li&gt;딥살사는 각각의 위치에서 움직일 action이 정해짐(action 방향으로의 정책 update만 되어야 함 - 온폴리시)&lt;/li&gt;
-      &lt;li&gt;Q-learning은 정책update와 action이 따로(최고 q함수로 정책 update을 하면 됨 - 오프폴리시)&lt;/li&gt;
-      &lt;li&gt;action과 관련성이 없는 Q-learning에서 경험리플레이의 사용이 가능&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;만약 딥살사에서 경험리플레이를 사용한다면?&lt;br /&gt;
-경로의 마지막부터 거꾸로 학습이 된다고 할 때 잘못된 모험을 하여 q함수값이 감소한다면&lt;br /&gt;
-그 경로 위의 모든 노드는 q함수값이 감소하게 될 것!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;심층신경망(model, target_model)
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 Q함수 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;심층신경망(입력층1, 은닉층2, 출력층1:linear)&lt;/li&gt;
-      &lt;li&gt;출력 : q함수 테이블&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;행동
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)를 입력으로 심층신경망을 통하여 q함수 테이블을 만들고 그 중 최고값을 행동으로 선택(a) (가끔식 모험)&lt;/li&gt;
-      &lt;li&gt;행동에 따른 보상(r)과 다음 상태(s’)를 추출&lt;/li&gt;
-      &lt;li&gt;s, a, r, s’ 저장&lt;/li&gt;
-      &lt;li&gt;s’으로 이동&lt;/li&gt;
-      &lt;li&gt;일정 이상의 데이터가 쌓일 때까지 계속 행동&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;일정치 이상 데이터가 쌓였다면 개선 시작(이 다음부터는 행동 한 번에 개선 한 번)&lt;/li&gt;
-      &lt;li&gt;데이터들 중 무작위로 추출&lt;/li&gt;
-      &lt;li&gt;(s,a)로 q추출(model 사용) / r / (s)로 q’의 최고값 추출(target_model 사용)&lt;/li&gt;
-      &lt;li&gt;딥살사와 다른점은 action과 상관없이 최고 q함수 선택&lt;/li&gt;
-      &lt;li&gt;s 입력, (r + 감가율 * q’) 정답으로 신경망 개선(model)&lt;/li&gt;
-      &lt;li&gt;한 번의 episode가 끝나면 target_model을 현재 model로 update&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;DQN에서는 target_model과 model 두 가지의 신경망을 이용한다&lt;/p&gt;
-
-&lt;h4 id=&quot;액터-크리틱ac&quot;&gt;액터-크리틱(AC)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;폴리시그레이디언트는 반환값(감가율이 계산된 보상값들)을 사용하기에 목표지점까지 도달 후 개선 가능&lt;/li&gt;
-      &lt;li&gt;액터-크리틱은 반환값대신 Q함수를 사용하여 스텝마다 개선이 가능&lt;/li&gt;
-      &lt;li&gt;Q함수를 근사하는 인공신경망을 하나 더 만드는 것(=가치신경망)&lt;/li&gt;
-      &lt;li&gt;가치신경망에서 현재의 가치(v)와 다음의 가치(v’)를 예측&lt;/li&gt;
-      &lt;li&gt;가치신경망은 cost = ( (R + ᵧv’) - v )^2&lt;/li&gt;
-      &lt;li&gt;정책신경망은 기존 반환값 위치를 어드벤티지 함수로 대체&lt;/li&gt;
-      &lt;li&gt;큐함수로 대체하면 변화 정도가 너무 큼 -&amp;gt; 큐함수 - 가치함수(베이스라인) 로 대체 -&amp;gt; 어드벤티지 함수&lt;/li&gt;
-      &lt;li&gt;어드벤티지 함수 = (R + ᵧv’) - v&lt;/li&gt;
-      &lt;li&gt;정책신경망 = (log(정책))’ * 어드벤티지 함수&lt;/li&gt;
-      &lt;li&gt;Actor-Critic(AC) = Advantage Actor-Critic(A2C) 라고도 부름&lt;/li&gt;
-      &lt;li&gt;행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;신경망1(정책신경망)
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 행동확률 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;출력 : 행동확률 테이블(4)&lt;/li&gt;
-      &lt;li&gt;cost를 계산하는 식이 따로 존재(log …) =&amp;gt; keras에서 loss모델 만들어야 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;신경망2(가치신경망)
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 가치함수 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;심층신경망(입력층1, 은닉층2, 출력층1:linear)&lt;/li&gt;
-      &lt;li&gt;출력 : 가치함수(1)&lt;/li&gt;
-      &lt;li&gt;정답이 존재하므로 cost = (정답 - 예측)^2 =&amp;gt; keras에서 loss모델 안만들어도 됨&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;행동
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)를 입력으로 정책신경망을 통하여 행동확률 테이블을 만들고 확률적으로 선택하여 이동(룰렛휠)&lt;/li&gt;
-      &lt;li&gt;행동에 따른 보상(r)과 다음 상태(s’)를 추출&lt;/li&gt;
-      &lt;li&gt;s’으로 이동&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)와 다음 상태(s’)을 입력으로 가치신경망을 통하여 현재 상태의 가치(v)와 다음 상태의 가치(v’)을 예측&lt;/li&gt;
-      &lt;li&gt;정책신경망
-        &lt;ul&gt;
-          &lt;li&gt;어드벤티지 함수 생성 (= (R + ᵧv’) - v)&lt;/li&gt;
-          &lt;li&gt;현재 상태(s) 입력, ((log(정책))’ * 어드벤티지 함수)가 cost로 신경망 개선&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;가치신경망
-        &lt;ul&gt;
-          &lt;li&gt;target = (R + ᵧv’)&lt;/li&gt;
-          &lt;li&gt;현재 상태(s) 입력, target을 정답으로 신경망 개선&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #4</title><link href="http://localhost:4000/RL_note-4/" rel="alternate" type="text/html" title="RL_note #4" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#4</id><content type="html" xml:base="http://localhost:4000/RL_note-4/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;남은-문제점&quot;&gt;남은 문제점&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;NN을 이용한 계산복잡도 문제 해결&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;그리드월드와-근사함수&quot;&gt;그리드월드와 근사함수&lt;/h2&gt;
-&lt;h4 id=&quot;계산복잡도가-높다는-문제&quot;&gt;계산복잡도가 높다는 문제&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;차원의 수, 노드의 수가 많아지면 Q함수를 가지고 있기 너무 큼&lt;/li&gt;
-  &lt;li&gt;10 * 10 그리드월드라 할 때 행동이 4가지이기 때문에 10 * 10 * 4의 Q함수 테이블을 연산에 이용해야 함&lt;/li&gt;
-  &lt;li&gt;근사함수를 통한 가치함수의 매개변수화를 통해 해결가능&lt;/li&gt;
-  &lt;li&gt;SARSA -&amp;gt; 딥살사&lt;/li&gt;
-  &lt;li&gt;몬테카를로 -&amp;gt; 폴리시 그레이디언트&lt;/li&gt;
-  &lt;li&gt;Q-learning -&amp;gt; DQN(Deep Q-network)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;인공신경망nn과-케라스&quot;&gt;인공신경망(NN)과 케라스&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;인공신경망에 대한 설명은 생락&lt;/li&gt;
-  &lt;li&gt;케라스에서 인공신경망 구현 코드&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.layers&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;
-  &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;keras.models&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_dim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sigmoid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sigmoid'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'RMSProp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mse'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'RMSProp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;batch_size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epoch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;딥살사-이론&quot;&gt;딥살사 이론&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;살사 + DNN&lt;/li&gt;
-      &lt;li&gt;살사이론의 q함수 테이블을 근사함수를 만들어 저장&lt;/li&gt;
-      &lt;li&gt;행동시 지정 위치의 q함수들만 예측&lt;/li&gt;
-      &lt;li&gt;개선은 다음 지점의 q함수를 정답으로 하여 인공신경망 개선교육&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;심층신경망
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 Q함수 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;심층신경망(입력층1, 은닉층2, 출력층1:linear)&lt;/li&gt;
-      &lt;li&gt;출력 : q함수 테이블&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;행동
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)를 입력으로 심층신경망을 통하여 q함수 테이블을 생성&lt;/li&gt;
-      &lt;li&gt;q함수 테이블에서 최고값으로 행동으로 선택(a)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;심층신경망의 가중치를 개선 ( = Q함수 개선 )&lt;/li&gt;
-      &lt;li&gt;살사에서의 오류값을 이용&lt;/li&gt;
-      &lt;li&gt;오차 = (정답 – 예측)&lt;/li&gt;
-      &lt;li&gt;오차 = R + γQ(S2, A2) – Q(S1, S2)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;정책기반 강화학습 vs 가치기반 강화학습&lt;br /&gt;
-정책기반 : 정책에 따라 행동(정책평가가 이루어지지 않으면 최고가치가 존재해도 따라가지 않음)&lt;br /&gt;
-가치기반 : 최고가치가 최고정책으라는 가정하에 행동&lt;/p&gt;
-
-&lt;h4 id=&quot;폴리시-그레이디언트&quot;&gt;폴리시 그레이디언트&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;몬테카를로 + DNN&lt;/li&gt;
-      &lt;li&gt;행동 -&amp;gt; 행동 -&amp;gt; 행동 -&amp;gt; … -&amp;gt; 개선&lt;/li&gt;
-      &lt;li&gt;q함수 근사가 아닌 정책 근사로 행동 및 개선&lt;/li&gt;
-      &lt;li&gt;탐욕정책이 아닌 각 방향으로 갈 확률 근사&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;심층신경망
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 각 방향의 정책 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;심층신경망(입력층1, 은닉층2, 출력층1:sofrmax)&lt;/li&gt;
-      &lt;li&gt;출력 : 각 행동을 할 확률&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;행동
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)를 입력으로 심층신경망을 통하여 각 방향으로 갈 확률 계산&lt;/li&gt;
-      &lt;li&gt;확률 기반으로 하나 선택(룰렛휠)&lt;/li&gt;
-      &lt;li&gt;끝날 때까지 계속 이동&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;지나온 경로 각각의 cost 계산&lt;/li&gt;
-      &lt;li&gt;s 입력, cost로 개선&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;문제&lt;br /&gt;
-현재 정책에 대한 정답값이 없음&lt;br /&gt;
-cost의 계산이 불가&lt;br /&gt;&lt;br /&gt;
-해결책&lt;br /&gt;
-각 위치의 가치함수(감가율이 계산된 보상값들의 합) = A&lt;br /&gt;
-각 위치에서의 행동에 해당하는 정책값 = B&lt;br /&gt;
-cost = - log(B) * A&lt;br /&gt;&lt;br /&gt;
-왜냐하면…&lt;br /&gt;
-정책신경망 업데이트 방식 : Q = Q + 학습속도*(cost)’&lt;br /&gt;
-cost = 정책 * q함수 (Richard Sutton의 논문)&lt;br /&gt;
-cost’ = 정책’ * q함수&lt;br /&gt;
-cost’ = (정책’/정책) * 가치함수 =&amp;gt;  because. 가치함수 = 정책 ** q함수 (기존식)&lt;br /&gt;
-cost’ = (log(정책))’ * 가치함수&lt;br /&gt;
-cost’ = (log(정책))’ * (감가율이 계산된 보상의 합)&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;계산복잡도 문제 해결&lt;/code&gt;&lt;/p&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #3</title><link href="http://localhost:4000/RL_note-3/" rel="alternate" type="text/html" title="RL_note #3" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#3</id><content type="html" xml:base="http://localhost:4000/RL_note-3/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;문제점&quot;&gt;문제점&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;환경에 대한 정보부족 문제&lt;/li&gt;
-  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;새로운 모델을 통한 환경에 대한 정보부족 문제 해결&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;그리드월드와-큐러닝&quot;&gt;그리드월드와 큐러닝&lt;/h2&gt;
-&lt;h4 id=&quot;환경에-대한-정보가-없는-문제&quot;&gt;환경에 대한 정보가 없는 문제&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;모든 곳의 보상값을 아는 것 vs 보상값을 모르는 것&lt;/li&gt;
-  &lt;li&gt;행동하여 간 곳만 개선(실제 문제)&lt;/li&gt;
-  &lt;li&gt;행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; 개션 -&amp;gt; …&lt;/li&gt;
-  &lt;li&gt;몬테카를로 예측, 시간차 예측&lt;/li&gt;
-  &lt;li&gt;SARSA, Q-learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;몬테카를로-예측&quot;&gt;몬테카를로 예측&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;알파고 작동원리&lt;/li&gt;
-  &lt;li&gt;많은 샘플링을 통하여 실제 값의 근사치를 찾아나가는 방법&lt;/li&gt;
-  &lt;li&gt;한 번의 경로가 하나의 샘플링이 되어 그 경로의 값들을 개선&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;시간차-예측&quot;&gt;시간차 예측&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;몬테카를로는 실시간이 아님&lt;/li&gt;
-  &lt;li&gt;한 번의 스텝으로도 가치함수를 update하는 방법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;sarsa&quot;&gt;SARSA&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;S = state, A = action, R = reward, S = state, A = action&lt;/li&gt;
-  &lt;li&gt;시간차 예측을 통한 학습 알고리즘&lt;/li&gt;
-  &lt;li&gt;정책평가 + 정책발전 = 개선(Q함수 update)&lt;/li&gt;
-  &lt;li&gt;행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; …&lt;/li&gt;
-  &lt;li&gt;행동(입실론 탐욕)
-    &lt;ul&gt;
-      &lt;li&gt;행동은 기본적으로 가장 높은 Q함수로 진행&lt;/li&gt;
-      &lt;li&gt;입실론의 확률로 랜덤 노드를 선택&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;행동한 방향으로 Q함수 update&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;입실론 탐욕정책으로 행동하고 그 방향으로 발전(온폴리시)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;원래는 Q = 보상 + 감가율 * 가치함수&lt;br /&gt;
-탐욕정책으로 인하여 가장 높은 Q함수 = 가치함수&lt;br /&gt;
-Q = 다음 노드의 보상 + 감가율 * Q’&lt;/p&gt;
-
-&lt;h4 id=&quot;q-learning&quot;&gt;Q-learning&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;행동
-    &lt;ul&gt;
-      &lt;li&gt;SARSA와 동일하게 탐욕정책&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;SARSA와 동일하지만 만약 에이전트가 모험을 선택했다가 더 안좋은 상황이 생겼다면?&lt;/li&gt;
-      &lt;li&gt;행동한 곳 기준으로 개선하는 것이 아니라 무조건 가장높은 Q’값 기준으로 개선&lt;/li&gt;
-      &lt;li&gt;SARSA의 문제점 보완&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;환경문제 해결&lt;/code&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;남은-문제점&quot;&gt;남은 문제점&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #2</title><link href="http://localhost:4000/RL_note-2/" rel="alternate" type="text/html" title="RL_note #2" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#2</id><content type="html" xml:base="http://localhost:4000/RL_note-2/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;강화학습의 기본 모델 학습&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;그리드-월드와-다이내믹-프로그래밍&quot;&gt;그리드 월드와 다이내믹 프로그래밍&lt;/h2&gt;
-&lt;h3 id=&quot;그리드월드&quot;&gt;그리드월드&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;n * n의 격자 공간&lt;/li&gt;
-  &lt;li&gt;이전에 가정했던 5 * 5 격자공간을 가정&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;동적-계획법다이내믹-프로그래밍&quot;&gt;동적 계획법(다이내믹 프로그래밍)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;정의
-    &lt;ul&gt;
-      &lt;li&gt;리처드 벨만에 의해서 만들어진 최적화 방정식&lt;/li&gt;
-      &lt;li&gt;나무위키 : https://namu.wiki/w/동적%20계획법&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;예제
-    &lt;ul&gt;
-      &lt;li&gt;https://www.acmicpc.net/problem/1003&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;동적-계획법을-통한-강화학습&quot;&gt;동적 계획법을 통한 강화학습&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;가치(Q함수) update 시에 사용&lt;/li&gt;
-  &lt;li&gt;V 	=  $E[𝑹_𝟏  + γ 𝑹_𝟐 + γ^𝟐 𝑹_𝟑   + … + γ^{𝒏−𝟏} 𝑹_𝒏]$&lt;br /&gt;
-  	=   $E[𝑹_𝟏 + γV’]$&lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;q&lt;em&gt;(s)  	= E[R + γ max q&lt;/em&gt; (𝑺_(𝒕+𝟏), a’)&lt;/td&gt;
-          &lt;td&gt;𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;벨만 기대 방정식 -&amp;gt; 정책 이터레이션&lt;/li&gt;
-  &lt;li&gt;벨만 최적 방정식 -&amp;gt; 가치 이터레이션&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;정책-평가와-정책-발전&quot;&gt;정책 평가와 정책 발전&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;정책평가 = Q함수 값들을 이용해 현재 노드 가치 update&lt;/li&gt;
-  &lt;li&gt;정책발전(탐욕정책) = Q함수값들을 이용해 현재 노드의 정책 update&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;정책-이터레이션&quot;&gt;정책 이터레이션&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;평가 -&amp;gt; 평가 -&amp;gt; 발전 -&amp;gt; 평가 -&amp;gt; … -&amp;gt; 평가 -&amp;gt; &lt;strong&gt;행동&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;평가시 이전 정책을 토대로 평가&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;가치-이터레이션&quot;&gt;가치 이터레이션&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;정책 발전이 존재하지 않음&lt;/li&gt;
-  &lt;li&gt;평가 -&amp;gt; 평가 -&amp;gt;  … -&amp;gt; 평가 -&amp;gt; &lt;strong&gt;행동&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;평가시 정책과 상관없이 최대Q함수로 가치 update&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;Q : 정책 이터레이션도 탐욕정책을 취하기에 가장 큰 Q함수를 가진 방향의 정책만을 취하게 되는데 그러면 가치 이터레이션과 동일하다?&lt;br /&gt;
-A : 정책 이터레이션은 정책이 명확히 명시되어 있어 그 정책에 따라서만 발전한다.&lt;br /&gt;
-하지만 가치 이터레이션은 정책이 명확히 명시되어 있지 않고 최대 Q함수로만 발전된다.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;문제점&quot;&gt;문제점&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;환경에 대한 정보부족 문제&lt;/li&gt;
-  &lt;li&gt;계산복잡도가 높다는 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #1</title><link href="http://localhost:4000/RL_note-1/" rel="alternate" type="text/html" title="RL_note #1" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#1</id><content type="html" xml:base="http://localhost:4000/RL_note-1/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;강화학습이란&quot;&gt;강화학습이란&lt;/h2&gt;
-&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;시행착오를 통하여 학습하는 알고리즘&lt;/li&gt;
-  &lt;li&gt;실제상황
-    &lt;ul&gt;
-      &lt;li&gt;상황이 주어짐 (자전거를 타는 상황)&lt;/li&gt;
-      &lt;li&gt;에이전트가 행동 (오른쪽으로 핸들 돌리기)&lt;/li&gt;
-      &lt;li&gt;환경이 보상 (넘어짐 / 안넘어짐)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;적용가능한-문제들&quot;&gt;적용가능한 문제들&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;경로 찾기, 스케줄링&lt;/li&gt;
-  &lt;li&gt;미로찾기, Frozen Lake, TSP …&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;기본-모델&quot;&gt;기본 모델&lt;/h2&gt;
-&lt;h3 id=&quot;순차적-행동-결정-문제&quot;&gt;순차적 행동 결정 문제&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;순차적으로 행동을 결정해야하는 문제들&lt;/li&gt;
-  &lt;li&gt;5 * 5 격자공간에서 이동 최단거리를 탐색 문제로 가정
-( (0, 0)에서 시작, (4, 4)에서 종료 )&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;순차적-행동-결정-문제의-구성-요소&quot;&gt;순차적 행동 결정 문제의 구성 요소&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;상태(state) : &amp;lt;/tab&amp;gt;현재 내가 어디에 있는지&lt;/li&gt;
-  &lt;li&gt;행동(action) : 어디로 이동할지&lt;/li&gt;
-  &lt;li&gt;보상(reward) : 행동 했을 때 좋은 행동인지 안 좋은 행동인지&lt;/li&gt;
-  &lt;li&gt;정책(policy) : 각각의 상황에서 어디로 이동할 지에 대한 표지판&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;mdp와-벨만-방정식&quot;&gt;MDP와 벨만 방정식&lt;/h2&gt;
-&lt;h3 id=&quot;mdpmarkov-decision-process&quot;&gt;MDP(Markov Decision Process)&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;순차적 행동결정 문제를 수학적 정의하여 프로세스를 설명&lt;/li&gt;
-  &lt;li&gt;상태 / 행동 / 보상 / 상태 변환 확률 / 정책 으로 구성&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mdp-구성-요소&quot;&gt;MDP 구성 요소&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;상태(S) = (1, 1) : (1, 1)지점에 존재&lt;/li&gt;
-  &lt;li&gt;행동(A) = (1,0,0,0) : 위로 움직임&lt;/li&gt;
-  &lt;li&gt;보상함수(R)
-    &lt;ul&gt;
-      &lt;li&gt;$R = E[R|S, A]$&lt;/li&gt;
-      &lt;li&gt;(1,1) 지점에서 위로 움직였을 때 받을 보상(E = 기대)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;상태 변환 확률(P)
-    &lt;ul&gt;
-      &lt;li&gt;$P^{ss’}_{a} = P[S = s’|S = s, A = a]$ : (1, 1) 지점에서 움직일지 말지&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;정책(π)
-    &lt;ul&gt;
-      &lt;li&gt;$π(a|s) = P[A = a|S = s]$ : (1,1) 위치에서 어디로 이동해야 가장 좋을지&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mdp-외-문제를-풀기위해-필요한-개념&quot;&gt;MDP 외 문제를 풀기위해 필요한 개념&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;감가율( γ )&lt;/li&gt;
-  &lt;li&gt;모든 보상은 감가율이 계산되어 가치로 환산됨&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;감가율을 고려한 미래보상의 현재 가치(V) = $γ^{𝒌−𝟏} 𝑹_𝒌$&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;반환값 (G)
-    &lt;ul&gt;
-      &lt;li&gt;감가율이 계산된 보삼들의 합&lt;/li&gt;
-      &lt;li&gt;$𝑹_𝟏  + γ𝑹_𝟐 + γ^𝟐 𝑹_𝟑 + … + γ^{𝒏−𝟏} 𝑹_𝒏$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;가치함수(V)&lt;/li&gt;
-  &lt;li&gt;각각의 노드들이 가지고 있는 가치&lt;/li&gt;
-  &lt;li&gt;이후에 받을 감가율이 계산된 보상들의 합&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;$V =  E[G | S = s]$ &lt;br /&gt;
-  =  $E[𝑹_𝟏  + γ𝑹_𝟐 + γ^𝟐 𝑹_𝟑   + … + γ^{𝒏−𝟏} 𝑹_𝒏]$&lt;br /&gt;
-  =  $E[𝑹_𝟏 + γV’]$&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Q함수
-    &lt;ul&gt;
-      &lt;li&gt;행동 가치함수 (방향이 정해진 가치함수)&lt;/li&gt;
-      &lt;li&gt;한 상태에서 네 방향으로의 진행이 가능하기 때문에 가치함수를 구하려면 네 방향의 보상과 가치함수를 고려해야 함&lt;/li&gt;
-      &lt;li&gt;오른쪽의 Q함수 = (오른쪽의 보상 + γ * 오른쪽 노드의 가치함수)&lt;/li&gt;
-      &lt;li&gt;오른쪽의 Q함수 = (오른쪽의 보상 + γ * 오른쪽 노드의 다음행동 Q함수)&lt;/li&gt;
-      &lt;li&gt;계산 가능 형태의 가치함수(V)&lt;br /&gt;
-= 각 방향의 정책 * 각 방향의 Q함수 &lt;br /&gt;
-=  $\sum_{a\in A} π(a|s) * q(s, a)$&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;벨만-방정식&quot;&gt;벨만 방정식&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;가치를 계산하는 방정식&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;벨만-기대-방정식&quot;&gt;벨만 기대 방정식&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;정책에 따라서 가치를 판단 ( 정책은 항상 고정되어 있고 정책 발전시에만 변경됨 )&lt;/li&gt;
-  &lt;li&gt;가치함수 = 각 방향의 정책 * 각 방향의 (보상 + 감가율 * 다음 상태의 가치함수)&lt;/li&gt;
-  &lt;li&gt;$𝑽_π (s)$ = $𝑬_π[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s]$ &lt;br /&gt;
-= $\sum_{𝒂\in 𝑨}π(a|s) * (𝑹_{𝒕+𝟏}+γ𝒗_π (𝒔^′))$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;벨만-최적-방정식&quot;&gt;벨만 최적 방정식&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;가장 높은 Q함수를 가진 노드만을 선택하여 가치함수 계산 ( 정책과 상관없이 )&lt;/li&gt;
-  &lt;li&gt;가치함수 = 보상 + 감가율 * 최고 가치를 가진 방향의 가치함수&lt;/li&gt;
-  &lt;li&gt;$\prod^{*}(s,a) =
-\begin{cases}
-1\ if\ a = argmax_{a\in A}q^*(s,a)
-\\ 0\ otherwise
-\end{cases}$&lt;/li&gt;
-  &lt;li&gt;$v^*(s)	= maxE[R + γ𝑽_π (𝑺_{𝒕+𝟏}) | 𝑺_𝒕 = s ]$&lt;/li&gt;
-  &lt;li&gt;$q^{*}(s) = E[R + γ max q^* (𝑺_{𝒕+𝟏}, a’) | 𝑺_𝒕 = s, 𝑨_𝒕=𝒂 ]$&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">ML_note #6 딥러닝의 활용</title><link href="http://localhost:4000/ML_note-After_NN/" rel="alternate" type="text/html" title="ML_note #6 딥러닝의 활용" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#%20After_NN</id><content type="html" xml:base="http://localhost:4000/ML_note-After_NN/">&lt;h1 id=&quot;딥러닝의-활용&quot;&gt;딥러닝의 활용&lt;/h1&gt;
-
-&lt;h4 id=&quot;사물검출&quot;&gt;사물검출&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;R-CNN&lt;/li&gt;
-  &lt;li&gt;이미지의 변형 및 분류에 SVM을 이용&lt;/li&gt;
-  &lt;li&gt;Selective Search 기법을 사용&lt;/li&gt;
-  &lt;li&gt;후보 영역 추출까지 CNN으로 처리하는 Faster R-CNN기법도 등장&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;분할&quot;&gt;분할&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;이미지 분류를 픽셀 수준에 적용&lt;/li&gt;
-  &lt;li&gt;FCN(Fully Convolutional Network)를 이용&lt;/li&gt;
-  &lt;li&gt;합성곱 계층만으로 구성된 네트워크&lt;/li&gt;
-  &lt;li&gt;FCN의 마지막에 수행하는 확대는 이중 선형 보간에 의한 선형 확대&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;_완전 연결 계층에서는 출력이 모든 입력과 연결됩니다. 이와 같은 구성을 합성곱 계층으로도 구현할 수 있습니다. 가령 입력 크기가 32 * 10 * 10(채널32개, 높이 10, 너비 10)인 데이터에 대한 완전연결 계층은 필터 크기가 32 * 10 * 10인 합성곱 게층으로 대체할 수 있습니다. 만약, 완전연결 계층의 출력 노드가 100개라면 합성곱 계층에서는 기존의 32 * 10 * 10필터를 100개 준비하면 완전히 같은 처리를 할 수 있습니다. 이처럼 완전연결 계층은 같은 일을 수행하는 합성곱 계층으로 대체할 수 있습니다.&lt;/p&gt;
-
-&lt;h4 id=&quot;사진-캡션-생성&quot;&gt;사진 캡션 생성&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;NIC(Neural Image Caption)모델이 대표적&lt;/li&gt;
-  &lt;li&gt;CNN과 RNN의 조합으로 구성&lt;/li&gt;
-  &lt;li&gt;사진이나 자연어와 같은 여러 정보를 조합 처리하는 것을 멀티모달 처리라고 함&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;이미지-스타일화풍-변환&quot;&gt;이미지 스타일(화풍) 변환&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a neural=&quot;&quot; algorithm=&quot;&quot; of=&quot;&quot; artistic=&quot;&quot; style=&quot;&quot;&gt; 논문&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;이미지-생성&quot;&gt;이미지 생성&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;DCGAN(Deep Convolutional Generative Adversarial Network) 기법&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;GAN&lt;/strong&gt;&lt;br /&gt;
-…&lt;/p&gt;
-
-&lt;h4 id=&quot;자율-주행&quot;&gt;자율 주행&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;SegNet이라는 CNN 기반 신경망&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Deep Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry></feed>
