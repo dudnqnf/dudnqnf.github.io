@@ -14,6 +14,10 @@ comments: true
 #### putty/puttygen/pageant 설치
 - https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 
+#### EC2
+- 인바운드 설정
+- 키 페어 설정
+
 #### puttygen/pageant
 - public_key / private_key 생성
 - EC2 키페어에 public_key 등록
@@ -24,6 +28,12 @@ comments: true
 - connection -> SSH -> Auth 에서 private_key 등록(pageant 있으면 안해도 되는듯 함)
 - 접속
 - user_id : ubuntu
+
+#### Trouble shouting
+- SSH 접속 불가
+  - ERROR : no supported authentication methods available server sent publickey
+  - 어떤 서버냐에 따라 Default 아이디 / SSH 접속 환경이 다름
+  - 다양한 서버 시도
 
 #### mysql
     # mysql 설치

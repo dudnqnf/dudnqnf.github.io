@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-24T14:55:32+09:00</updated><id>http://localhost:4000/</id><title type="html">LeeHyunSik</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 Selenium</title><link href="http://localhost:4000/AWS_EC2_Selenium/" rel="alternate" type="text/html" title="AWS/EC2 Selenium" /><published>2018-07-16T00:00:00+09:00</published><updated>2018-07-16T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Selenium</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Selenium/">&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-09T15:27:53-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Daniel Hyunsik Lee</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 HeidiSQL</title><link href="http://localhost:4000/AWS_EC2_HeidiSQL/" rel="alternate" type="text/html" title="AWS/EC2 HeidiSQL" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_HeidiSQL</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_HeidiSQL/">&lt;h4 id=&quot;설정-탭&quot;&gt;설정 탭&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;네트워크 유형 : MYSQL (SSH tunnel)&lt;/li&gt;
+  &lt;li&gt;호스트명 : EC2 서버주소&lt;/li&gt;
+  &lt;li&gt;사용자 : MySql 아이디&lt;/li&gt;
+  &lt;li&gt;암호 : MySql 비밀번호&lt;/li&gt;
+  &lt;li&gt;포트 : 3306 (default)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ssh-터널-탭&quot;&gt;SSH 터널 탭&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;plink.exe 위치 : 다운로드 후 위치 설정&lt;/li&gt;
+  &lt;li&gt;SSH 호스트 + 포트 : EC2 서버주소 + 22 (default)&lt;/li&gt;
+  &lt;li&gt;사용자 이름 : ubuntu&lt;/li&gt;
+  &lt;li&gt;암호 : 공란&lt;/li&gt;
+  &lt;li&gt;개인 키 파일 : private_key.pem 주소&lt;/li&gt;
+  &lt;li&gt;로컬포트 : 3307 (default)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">AWS/EC2 Selenium</title><link href="http://localhost:4000/AWS_EC2_Selenium/" rel="alternate" type="text/html" title="AWS/EC2 Selenium" /><published>2018-07-16T00:00:00-05:00</published><updated>2018-07-16T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_Selenium</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Selenium/">&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;p&gt;https://christopher.su/2015/selenium-chromedriver-ubuntu/&lt;/p&gt;
 
 &lt;h4 id=&quot;트러블-이슈&quot;&gt;트러블 이슈…&lt;/h4&gt;
@@ -7,7 +24,7 @@
   &lt;li&gt;selenium 버전문제&lt;/li&gt;
   &lt;li&gt;webdriver 접근문제&lt;/li&gt;
   &lt;li&gt;(beautifulsoup4) html5lib -&amp;gt; lxml&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">AWS/EC2 Django diploy</title><link href="http://localhost:4000/AWS_EC2_Django/" rel="alternate" type="text/html" title="AWS/EC2 Django diploy" /><published>2018-07-12T00:00:00+09:00</published><updated>2018-07-12T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Django</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Django/">&lt;h4 id=&quot;aws-서버세팅&quot;&gt;AWS 서버세팅&lt;/h4&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">AWS/EC2 Django diploy</title><link href="http://localhost:4000/AWS_EC2_Django/" rel="alternate" type="text/html" title="AWS/EC2 Django diploy" /><published>2018-07-12T00:00:00-05:00</published><updated>2018-07-12T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_Django</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Django/">&lt;h4 id=&quot;aws-서버세팅&quot;&gt;AWS 서버세팅&lt;/h4&gt;
 &lt;p&gt;… 이전글 참조&lt;/p&gt;
 
 &lt;h4 id=&quot;과정&quot;&gt;과정&lt;/h4&gt;
@@ -119,7 +136,7 @@ logger = logging.getLogger(&quot;django&quot;)
   		logger.error(e)
   		...
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Django</title><link href="http://localhost:4000/Django/" rel="alternate" type="text/html" title="Django" /><published>2018-07-10T00:00:00+09:00</published><updated>2018-07-10T00:00:00+09:00</updated><id>http://localhost:4000/Django</id><content type="html" xml:base="http://localhost:4000/Django/">&lt;h4 id=&quot;프로젝트-구조&quot;&gt;프로젝트 구조&lt;/h4&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Django</title><link href="http://localhost:4000/Django/" rel="alternate" type="text/html" title="Django" /><published>2018-07-10T00:00:00-05:00</published><updated>2018-07-10T00:00:00-05:00</updated><id>http://localhost:4000/Django</id><content type="html" xml:base="http://localhost:4000/Django/">&lt;h4 id=&quot;프로젝트-구조&quot;&gt;프로젝트 구조&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 프로젝트 생성
 # Command
 django-admin startproject mysite
@@ -295,17 +312,17 @@ return render(request, 'blog/post_list.html', {'posts': posts})
 &lt;/div&gt;
 
 &lt;h4 id=&quot;정적-파일&quot;&gt;정적 파일&lt;/h4&gt;
-&lt;p&gt;{% highlight python %}
-    # blog/static/css/blog.css
-    # 파일생성
-    h1 a {
-        color: #FCA205;
-    }&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;highlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;blog/static/css/blog.css&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;파일생성&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;color:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#FCA205;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# blog/templates/blog/post_list.html
-{% load staticfiles %}
-&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;{% static 'css/blog.css' %}&quot;&amp;gt; {% endhighlight %}
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;blog/templates/blog/post_list.html&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;staticfiles&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;lt;link&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{% static 'css/blog.css' %}&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;endhighlight&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h4 id=&quot;템플릿-확장&quot;&gt;템플릿 확장&lt;/h4&gt;
@@ -356,7 +373,7 @@ DATABASES = {
 # Command
 python manage.py migrate
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="Django" /></entry><entry><title type="html">Javascript</title><link href="http://localhost:4000/Javascript/" rel="alternate" type="text/html" title="Javascript" /><published>2018-07-05T00:00:00+09:00</published><updated>2018-07-05T00:00:00+09:00</updated><id>http://localhost:4000/Javascript</id><content type="html" xml:base="http://localhost:4000/Javascript/">&lt;h4 id=&quot;basic-javascript&quot;&gt;Basic Javascript&lt;/h4&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Django" /></entry><entry><title type="html">Javascript</title><link href="http://localhost:4000/Javascript/" rel="alternate" type="text/html" title="Javascript" /><published>2018-07-05T00:00:00-05:00</published><updated>2018-07-05T00:00:00-05:00</updated><id>http://localhost:4000/Javascript</id><content type="html" xml:base="http://localhost:4000/Javascript/">&lt;h4 id=&quot;basic-javascript&quot;&gt;Basic Javascript&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// 변수
   var a, b;
 
@@ -546,33 +563,7 @@ promiseTest(5)
   .then(val =&amp;gt; console.log(val)) // 5
   .catch(err =&amp;gt; console.log(err))
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="Language" /></entry><entry><title type="html">Ubuntu_pyenv</title><link href="http://localhost:4000/Ubuntu_pyenv/" rel="alternate" type="text/html" title="Ubuntu_pyenv" /><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><id>http://localhost:4000/Ubuntu_pyenv</id><content type="html" xml:base="http://localhost:4000/Ubuntu_pyenv/">&lt;h4 id=&quot;pyenv&quot;&gt;pyenv&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev
-
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-
-# path 설정
-vi ~/.bashrc
-export PATH = $PATH:/home:/var
-export PATH=&quot;/root/.pyenv/bin:$PATH&quot;
-eval &quot;$(pyenv init -)&quot;
-eval &quot;$(pyenv virtualenv-init -)&quot;
-source ~/.bashrc
-
-# pyenv 가상환경 만들기
-pyenv install --list
-pyenv install 3.6.4
-pyenv global 3.6.4
-pyenv versions
-
-# pyenv 가상환경 적용
-pyenv virtualenv 3.6.4 sample-env
-pyenv local sample-env
-pyenv shell uwsgi-env
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">AWS/EC2 Server Setting</title><link href="http://localhost:4000/AWS_EC2_Server_Setting/" rel="alternate" type="text/html" title="AWS/EC2 Server Setting" /><published>2018-07-02T00:00:00+09:00</published><updated>2018-07-02T00:00:00+09:00</updated><id>http://localhost:4000/AWS_EC2_Server_Setting</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Server_Setting/">&lt;h4 id=&quot;aws-가입&quot;&gt;AWS 가입&lt;/h4&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Language" /></entry><entry><title type="html">AWS/EC2 Server Setting</title><link href="http://localhost:4000/AWS_EC2_Server_Setting/" rel="alternate" type="text/html" title="AWS/EC2 Server Setting" /><published>2018-07-02T00:00:00-05:00</published><updated>2018-07-02T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_Server_Setting</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Server_Setting/">&lt;h4 id=&quot;aws-가입&quot;&gt;AWS 가입&lt;/h4&gt;
 &lt;h4 id=&quot;ec2-인스턴스-생성&quot;&gt;EC2 인스턴스 생성&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;Ubuntu Server 14.04 LTS (HVM)&lt;/li&gt;
@@ -636,29 +627,33 @@ source ~/.bashrc
 
 pyenv
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Ubuntu_pyenv</title><link href="http://localhost:4000/Ubuntu_pyenv/" rel="alternate" type="text/html" title="Ubuntu_pyenv" /><published>2018-07-02T00:00:00-05:00</published><updated>2018-07-02T00:00:00-05:00</updated><id>http://localhost:4000/Ubuntu_pyenv</id><content type="html" xml:base="http://localhost:4000/Ubuntu_pyenv/">&lt;h4 id=&quot;pyenv&quot;&gt;pyenv&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev
 
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;행렬 계산을 편리하게 해주는 파이썬 라이브러리&lt;/li&gt;
-&lt;/ul&gt;
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
-&lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
-  import numpy as np
+# path 설정
+vi ~/.bashrc
+export PATH = $PATH:/home:/var
+export PATH=&quot;/root/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
+source ~/.bashrc
 
-  # 배열 생성
-  arr = np.array([1,2,3])
+# pyenv 가상환경 만들기
+pyenv install --list
+pyenv install 3.6.4
+pyenv global 3.6.4
+pyenv versions
 
-  # 브로드캐스트
-  arr = np.array([[1,2],[3,4]]) * np.array([1,2]) # [[1,4],[3,8]]
-
-  # 원소 접근
-  arr[1,1] # arr[1][1]
-  arr[:] # 전체 행렬
-  arr[:1] # 0번째 행까지
-  arr[1:] # 1번째 행부터
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">matplotlib</title><link href="http://localhost:4000/python_note-matplotlib/" rel="alternate" type="text/html" title="matplotlib" /><published>2018-03-05T00:00:00+09:00</published><updated>2018-03-05T00:00:00+09:00</updated><id>http://localhost:4000/python_note#matplotlib</id><content type="html" xml:base="http://localhost:4000/python_note-matplotlib/">&lt;h1 id=&quot;matplotlib&quot;&gt;matplotlib&lt;/h1&gt;
+# pyenv 가상환경 적용
+pyenv virtualenv 3.6.4 sample-env
+pyenv local sample-env
+pyenv shell uwsgi-env
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">matplotlib</title><link href="http://localhost:4000/python_note-matplotlib/" rel="alternate" type="text/html" title="matplotlib" /><published>2018-03-05T00:00:00-06:00</published><updated>2018-03-05T00:00:00-06:00</updated><id>http://localhost:4000/python_note#matplotlib</id><content type="html" xml:base="http://localhost:4000/python_note-matplotlib/">&lt;h1 id=&quot;matplotlib&quot;&gt;matplotlib&lt;/h1&gt;
 
 &lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
@@ -693,7 +688,29 @@ pyenv
   plt.imshow(img)
 
   plt.show()
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00+09:00</published><updated>2018-01-01T00:00:00+09:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00-06:00</published><updated>2018-03-05T00:00:00-06:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+
+&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;행렬 계산을 편리하게 해주는 파이썬 라이브러리&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;
+  import numpy as np
+
+  # 배열 생성
+  arr = np.array([1,2,3])
+
+  # 브로드캐스트
+  arr = np.array([[1,2],[3,4]]) * np.array([1,2]) # [[1,4],[3,8]]
+
+  # 원소 접근
+  arr[1,1] # arr[1][1]
+  arr[:] # 전체 행렬
+  arr[:1] # 0번째 행까지
+  arr[1:] # 1번째 행부터
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00-06:00</published><updated>2018-01-01T00:00:00-06:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
 
 &lt;h4 id=&quot;msys2&quot;&gt;MSYS2&lt;/h4&gt;
 &lt;ul&gt;
@@ -743,122 +760,4 @@ pyenv
   &lt;li&gt;pip install gym[atari]로 하면 오류남&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry><entry><title type="html">RL_note #6</title><link href="http://localhost:4000/RL_note-6/" rel="alternate" type="text/html" title="RL_note #6" /><published>2017-12-22T00:00:00+09:00</published><updated>2017-12-22T00:00:00+09:00</updated><id>http://localhost:4000/RL_note#6</id><content type="html" xml:base="http://localhost:4000/RL_note-6/">&lt;h1 id=&quot;강화학습&quot;&gt;강화학습&lt;/h1&gt;
-
-&lt;h4 id=&quot;목표&quot;&gt;목표&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;브레이크아웃 게임을 DQN과 A3C로 풀기&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;브레이크아웃&quot;&gt;브레이크아웃&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;아타리 회사에서 개발한 벽부수기 게임(핑퐁)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;브레이크아웃의-문제&quot;&gt;브레이크아웃의 문제&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;이미지를 입력형태로 넣기 어려움 -&amp;gt; CNN&lt;/li&gt;
-  &lt;li&gt;픽셀 수가 너무 많음 -&amp;gt; 전처리&lt;/li&gt;
-  &lt;li&gt;공의 진행방향을 알려면 프레임을 여러개 입력 받아야 함 -&amp;gt; 프레임스킵&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;브레이크아웃과-cnnconvolution-neural-net&quot;&gt;브레이크아웃과 CNN(Convolution Neural Net.)&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;영상인식 분야에서 많이 사용되는 신경망&lt;/li&gt;
-      &lt;li&gt;필터를 통한 이미지 추상화 후 입력&lt;/li&gt;
-      &lt;li&gt;DQN, A3C 알고리즘으로 행동 개선&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;build_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-      &lt;span class=&quot;c&quot;&gt;# CNN&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sequential&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;\
-      &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_shape&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Conv2D&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;strides&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Flatten&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-
-      &lt;span class=&quot;c&quot;&gt;# DQN 신경망&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;512&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;activation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'relu'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dense&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;action_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;summary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;전처리&quot;&gt;전처리&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;이미지를 흑백으로 처리&lt;/li&gt;
-  &lt;li&gt;불필요한 공간을 잘라내고 사이즈를 줄임&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;프레임-스킵&quot;&gt;프레임 스킵&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;여러 프레임을 놓고 일정 간격으로 프레임 선택&lt;/li&gt;
-  &lt;li&gt;‘BreakoutDeterministic-v4’부터는 자동지원&lt;/li&gt;
-  &lt;li&gt;프레임 입력은 [1,2,3,4], [2,3,4,5], … 식으로 겹쳐서 입력&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;브레이크아웃과-dqn&quot;&gt;브레이크아웃과 DQN&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;개요
-    &lt;ul&gt;
-      &lt;li&gt;state = 4개의 과거 프레임을 겹친것(depth = 4)&lt;/li&gt;
-      &lt;li&gt;방향 = 왼쪽, 오른쪽, 정지&lt;/li&gt;
-      &lt;li&gt;q함수 = 각 방향으로 진행했을 경우 받을 보상의 합(동일)&lt;/li&gt;
-      &lt;li&gt;가장 높은 q함수를 선택하여 정책 개선(가치기반)&lt;/li&gt;
-      &lt;li&gt;cost는 기존대로 (정답 Q함수 - 예측 Q함수)^2&lt;/li&gt;
-      &lt;li&gt;경험리플레이를 사용&lt;/li&gt;
-      &lt;li&gt;행동 -&amp;gt; 행동 -&amp;gt; 행동 -&amp;gt; … -&amp;gt; 행동 -&amp;gt; 개선 -&amp;gt; 행동 -&amp;gt; 개선 -&amp;gt; …&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;경험리플레이
-    &lt;ul&gt;
-      &lt;li&gt;각각의 상태를 저장해 놨다가 쌓이면 랜덤으로 꺼내서 개선&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;신경망(model, target_model)
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태에 대한 q함수 예측&lt;/li&gt;
-      &lt;li&gt;입력 : 현재 상태에 대한 정보&lt;/li&gt;
-      &lt;li&gt;&lt;del&gt;심층신경망(입력층1, 은닉층2, 출력층1:linear)&lt;/del&gt;&lt;/li&gt;
-      &lt;li&gt;출력 : q함수 테이블&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;행동 및 개선
-    &lt;ul&gt;
-      &lt;li&gt;현재 상태(s)를 입력으로 심층신경망을 통하여 q함수 테이블을 만들고 그 중 최고값을 행동으로 선택(a) (가끔식 모험)&lt;/li&gt;
-      &lt;li&gt;행동에 따른 보상(r)과 다음 상태(s’)를 추출&lt;/li&gt;
-      &lt;li&gt;s, a, r, s’ 저장&lt;/li&gt;
-      &lt;li&gt;s’으로 이동&lt;/li&gt;
-      &lt;li&gt;일정 이상의 데이터가 쌓일 때까지 계속 행동&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;개선
-    &lt;ul&gt;
-      &lt;li&gt;일정치 이상 데이터가 쌓였다면 개선 시작(이 다음부터는 행동 한 번에 개선 한 번)&lt;/li&gt;
-      &lt;li&gt;데이터들 중 무작위로 추출&lt;/li&gt;
-      &lt;li&gt;(s,a)로 q추출(model 사용) / r / (s)로 q’의 최고값 추출(target_model 사용)&lt;/li&gt;
-      &lt;li&gt;딥살사와 다른점은 action과 상관없이 최고 q함수 선택&lt;/li&gt;
-      &lt;li&gt;s 입력, (r + 감가율  * q’) 정답으로 신경망 개선(model)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;추가&quot;&gt;추가&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;후버로스 그래프
-    &lt;ul&gt;
-      &lt;li&gt;기존 오류함수(2차함수)보다 더 안정적&lt;/li&gt;
-      &lt;li&gt;-1 ~ 1 사이의 값은 2차함수를 따르고 나머지 부분은 1차함수 그래프&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;브레이크아웃과-a3c&quot;&gt;브레이크아웃과 A3C&lt;/h4&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry></feed>
