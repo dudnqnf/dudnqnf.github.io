@@ -32,7 +32,8 @@ comments: true
 #### Trouble shouting
 - SSH 접속 불가
   - ERROR : no supported authentication methods available server sent publickey
-  - 어떤 서버냐에 따라 Default 아이디 / SSH 접속 환경이 다름
+  - private_key / public_key 를 미리 생성 후 인스턴스 만들때 넣어주기
+  - 어떤 서버냐에 따라 Default 아이디 / SSH 접속 환경이 다를 수 있음
   - 다양한 서버 시도
 
 #### mysql
