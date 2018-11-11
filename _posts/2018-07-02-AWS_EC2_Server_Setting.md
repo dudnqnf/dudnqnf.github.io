@@ -42,31 +42,19 @@ comments: true
     apt-get install mysql-server
 
     # mysql 접속
-    select host, user, password from user;
-    GRANT ALL PRIVILEGES ON *.* TO '계정명'@'%';
-    FLUSH PRIVILEGES;
+    mysql -u root -p
+    use mysql;
+    select host, user from user;
+    create user '계정명'@'%' identified by '비밀번호';
+    grant all privileges on *.* to '계정명'@'%';
+    flush privileges;
 
     # mysql 외부접속 설정변경
     vim /etc/mysql/my.cnf
     bind-address = 0.0.0.0
     service mysqld restart
 
-- EC2 인바운드 규칙 변경
-
-
-#### pyenv 설치
-    sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-    libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-    xz-utils tk-dev
-
-    curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-
-    # path설정
-    vi ~/.bashrc
-    export PATH = $PATH:/home:/var
-    export PATH="/root/.pyenv/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    source ~/.bashrc
-
-    pyenv
+    # mysql 외부접속 설정변경2
+    vim /etc/mysql/mysql.conf.d/mysqld.cnf
+    bind-address = 0.0.0.0
+    service mysql restart
