@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-09T15:27:53-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Daniel Hyunsik Lee</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 HeidiSQL</title><link href="http://localhost:4000/AWS_EC2_HeidiSQL/" rel="alternate" type="text/html" title="AWS/EC2 HeidiSQL" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_HeidiSQL</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_HeidiSQL/">&lt;h4 id=&quot;설정-탭&quot;&gt;설정 탭&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-12T16:51:59-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Daniel Hyunsik Lee</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 HeidiSQL</title><link href="http://localhost:4000/AWS_EC2_HeidiSQL/" rel="alternate" type="text/html" title="AWS/EC2 HeidiSQL" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_HeidiSQL</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_HeidiSQL/">&lt;h4 id=&quot;설정-탭&quot;&gt;설정 탭&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;네트워크 유형 : MYSQL (SSH tunnel)&lt;/li&gt;
   &lt;li&gt;호스트명 : EC2 서버주소&lt;/li&gt;
@@ -15,7 +15,48 @@
   &lt;li&gt;암호 : 공란&lt;/li&gt;
   &lt;li&gt;개인 키 파일 : private_key.pem 주소&lt;/li&gt;
   &lt;li&gt;로컬포트 : 3307 (default)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">AWS/EC2 Selenium</title><link href="http://localhost:4000/AWS_EC2_Selenium/" rel="alternate" type="text/html" title="AWS/EC2 Selenium" /><published>2018-07-16T00:00:00-05:00</published><updated>2018-07-16T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_Selenium</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Selenium/">&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">MongoDB</title><link href="http://localhost:4000/MongoDB/" rel="alternate" type="text/html" title="MongoDB" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/MongoDB</id><content type="html" xml:base="http://localhost:4000/MongoDB/">&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;SKIP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;명령어&quot;&gt;명령어&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 설치 후 PATH 설정
+# DB 실행
+mongod
+
+# DB 접속
+mongo
+
+# DB 생성 및 조회
+use db_name
+
+# 현재 DB 확인
+db
+
+# DB 리스트 확인
+show dbs
+
+# DB 제거
+use db_name
+db.dropDatabase();
+
+# Collection 생성
+use db_name
+db.createCollection(&quot;collection_name&quot;)
+
+# Collection 제거
+use db_name
+db.collection_name.drop()
+
+# Document 추가
+db.collection_name.insert({&quot;&quot;:&quot;&quot;})
+
+# Document 제거
+db.collection_name.remove(criteria, justOne)
+db.collection_name.remove({}) // remove all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="Database" /></entry><entry><title type="html">AWS/EC2 Selenium</title><link href="http://localhost:4000/AWS_EC2_Selenium/" rel="alternate" type="text/html" title="AWS/EC2 Selenium" /><published>2018-07-16T00:00:00-05:00</published><updated>2018-07-16T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_Selenium</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_Selenium/">&lt;h4 id=&quot;reference&quot;&gt;Reference&lt;/h4&gt;
 &lt;p&gt;https://christopher.su/2015/selenium-chromedriver-ubuntu/&lt;/p&gt;
 
 &lt;h4 id=&quot;트러블-이슈&quot;&gt;트러블 이슈…&lt;/h4&gt;
@@ -574,6 +615,12 @@ promiseTest(5)
   &lt;li&gt;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;ec2&quot;&gt;EC2&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;인바운드 설정&lt;/li&gt;
+  &lt;li&gt;키 페어 설정&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;puttygenpageant&quot;&gt;puttygen/pageant&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;public_key / private_key 생성&lt;/li&gt;
@@ -589,43 +636,40 @@ promiseTest(5)
   &lt;li&gt;user_id : ubuntu&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;trouble-shouting&quot;&gt;Trouble shouting&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;SSH 접속 불가
+    &lt;ul&gt;
+      &lt;li&gt;ERROR : no supported authentication methods available server sent publickey&lt;/li&gt;
+      &lt;li&gt;private_key / public_key 를 미리 생성 후 인스턴스 만들때 넣어주기&lt;/li&gt;
+      &lt;li&gt;어떤 서버냐에 따라 Default 아이디 / SSH 접속 환경이 다를 수 있음&lt;/li&gt;
+      &lt;li&gt;다양한 서버 시도&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h4 id=&quot;mysql&quot;&gt;mysql&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# mysql 설치
 apt-get update
 apt-get install mysql-server
 
 # mysql 접속
-select host, user, password from user;
-GRANT ALL PRIVILEGES ON *.* TO '계정명'@'%';
-FLUSH PRIVILEGES;
+mysql -u root -p
+use mysql;
+select host, user from user;
+create user '계정명'@'%' identified by '비밀번호';
+grant all privileges on *.* to '계정명'@'%';
+flush privileges;
 
 # mysql 외부접속 설정변경
 vim /etc/mysql/my.cnf
 bind-address = 0.0.0.0
 service mysqld restart
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;EC2 인바운드 규칙 변경&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;pyenv-설치&quot;&gt;pyenv 설치&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
-libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
-xz-utils tk-dev
-
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-
-# path설정
-vi ~/.bashrc
-export PATH = $PATH:/home:/var
-export PATH=&quot;/root/.pyenv/bin:$PATH&quot;
-eval &quot;$(pyenv init -)&quot;
-eval &quot;$(pyenv virtualenv-init -)&quot;
-source ~/.bashrc
-
-pyenv
+# mysql 외부접속 설정변경2
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+bind-address = 0.0.0.0
+service mysql restart
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Ubuntu_pyenv</title><link href="http://localhost:4000/Ubuntu_pyenv/" rel="alternate" type="text/html" title="Ubuntu_pyenv" /><published>2018-07-02T00:00:00-05:00</published><updated>2018-07-02T00:00:00-05:00</updated><id>http://localhost:4000/Ubuntu_pyenv</id><content type="html" xml:base="http://localhost:4000/Ubuntu_pyenv/">&lt;h4 id=&quot;pyenv&quot;&gt;pyenv&lt;/h4&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -710,54 +754,4 @@ pyenv shell uwsgi-env
   arr[:] # 전체 행렬
   arr[:1] # 0번째 행까지
   arr[1:] # 1번째 행부터
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">윈도우에서 아타리 설치방법</title><link href="http://localhost:4000/ML_note-window-atari-install/" rel="alternate" type="text/html" title="윈도우에서 아타리 설치방법" /><published>2018-01-01T00:00:00-06:00</published><updated>2018-01-01T00:00:00-06:00</updated><id>http://localhost:4000/ML_note#window%20atari%20install</id><content type="html" xml:base="http://localhost:4000/ML_note-window-atari-install/">&lt;h1 id=&quot;윈도우에서-아타리-설치방법&quot;&gt;윈도우에서 아타리 설치방법&lt;/h1&gt;
-
-&lt;h4 id=&quot;msys2&quot;&gt;MSYS2&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;http://www.msys2.org/&lt;/li&gt;
-  &lt;li&gt;CMAKE 등 설치를 위해 필요&lt;/li&gt;
-  &lt;li&gt;msys2실행
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;pacman -S base-devel mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;시스템-환경변수-변경&quot;&gt;시스템 환경변수 변경&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;DISPLAY = :0  (새로만들기)&lt;/li&gt;
-  &lt;li&gt;PHTYONPATH = c:\path\to\atari-py:$PYTHONPATH  (새로만들기)&lt;/li&gt;
-  &lt;li&gt;path
-    &lt;ul&gt;
-      &lt;li&gt;C:\msys64\mingw64\bin (추가)&lt;/li&gt;
-      &lt;li&gt;C:\msys64\usr\bin (추가)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;xming-x-server-설치&quot;&gt;Xming X server 설치&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;https://sourceforge.net/projects/xming/?source=directory&lt;/li&gt;
-  &lt;li&gt;linux게임을 GUI로 표현할 때 사용되는듯…&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;atari-설치&quot;&gt;atari 설치&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;git 설치&lt;/li&gt;
-  &lt;li&gt;cmd 실행
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;git clone https://github.com/rybskej/atari-py&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;cd atari-py&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;make&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;python setup.py install&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;pip install -U git+https://github.com/Kojoley/atari-py.git&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;오류수정&quot;&gt;오류수정&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;pip install gym[atari]로 하면 오류남&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;</content><author><name></name></author><category term="Reinforcement Learning" /><summary type="html">Machine Learning</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry></feed>
