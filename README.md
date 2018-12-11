@@ -1,5 +1,5 @@
-# 이현식의 홈페이지
+# Private Homepage
 
-여러분들을 환영합니다.
+Welcome!
 
 theme from moon
