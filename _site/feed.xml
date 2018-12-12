@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-12T16:51:59-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Daniel Hyunsik Lee</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 HeidiSQL</title><link href="http://localhost:4000/AWS_EC2_HeidiSQL/" rel="alternate" type="text/html" title="AWS/EC2 HeidiSQL" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_HeidiSQL</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_HeidiSQL/">&lt;h4 id=&quot;설정-탭&quot;&gt;설정 탭&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-12T11:49:02-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Daniel Hyunsik Lee</title><subtitle>blog</subtitle><entry><title type="html">AWS/EC2 HeidiSQL</title><link href="http://localhost:4000/AWS_EC2_HeidiSQL/" rel="alternate" type="text/html" title="AWS/EC2 HeidiSQL" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/AWS_EC2_HeidiSQL</id><content type="html" xml:base="http://localhost:4000/AWS_EC2_HeidiSQL/">&lt;h4 id=&quot;설정-탭&quot;&gt;설정 탭&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;네트워크 유형 : MYSQL (SSH tunnel)&lt;/li&gt;
   &lt;li&gt;호스트명 : EC2 서버주소&lt;/li&gt;
@@ -15,7 +15,12 @@
   &lt;li&gt;암호 : 공란&lt;/li&gt;
   &lt;li&gt;개인 키 파일 : private_key.pem 주소&lt;/li&gt;
   &lt;li&gt;로컬포트 : 3307 (default)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">MongoDB</title><link href="http://localhost:4000/MongoDB/" rel="alternate" type="text/html" title="MongoDB" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/MongoDB</id><content type="html" xml:base="http://localhost:4000/MongoDB/">&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="AWS" /></entry><entry><title type="html">Liquid</title><link href="http://localhost:4000/Liquid/" rel="alternate" type="text/html" title="Liquid" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/Liquid</id><content type="html" xml:base="http://localhost:4000/Liquid/">&lt;h4 id=&quot;intro&quot;&gt;Intro&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Jekyll templating language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;명령어&quot;&gt;명령어&lt;/h4&gt;</content><author><name></name></author><category term="Jekyll" /></entry><entry><title type="html">MongoDB</title><link href="http://localhost:4000/MongoDB/" rel="alternate" type="text/html" title="MongoDB" /><published>2018-08-24T00:00:00-05:00</published><updated>2018-08-24T00:00:00-05:00</updated><id>http://localhost:4000/MongoDB</id><content type="html" xml:base="http://localhost:4000/MongoDB/">&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;SKIP&lt;/li&gt;
 &lt;/ul&gt;
@@ -732,26 +737,4 @@ pyenv shell uwsgi-env
   plt.imshow(img)
 
   plt.show()
-&lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry><entry><title type="html">numpy</title><link href="http://localhost:4000/python_note-numpy/" rel="alternate" type="text/html" title="numpy" /><published>2018-03-05T00:00:00-06:00</published><updated>2018-03-05T00:00:00-06:00</updated><id>http://localhost:4000/python_note#numpy</id><content type="html" xml:base="http://localhost:4000/python_note-numpy/">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
-
-&lt;h4 id=&quot;개요&quot;&gt;개요&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;행렬 계산을 편리하게 해주는 파이썬 라이브러리&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;기본&quot;&gt;기본&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;
-  import numpy as np
-
-  # 배열 생성
-  arr = np.array([1,2,3])
-
-  # 브로드캐스트
-  arr = np.array([[1,2],[3,4]]) * np.array([1,2]) # [[1,4],[3,8]]
-
-  # 원소 접근
-  arr[1,1] # arr[1][1]
-  arr[:] # 전체 행렬
-  arr[:1] # 0번째 행까지
-  arr[1:] # 1번째 행부터
 &lt;/code&gt;&lt;/pre&gt;</content><author><name></name></author><category term="Python Note" /></entry></feed>

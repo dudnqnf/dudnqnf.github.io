@@ -11,6 +11,11 @@ layout: compress
 </head>
 <body>
     {% include nav.html %}
+    <style>
+      .btn_lang{
+      	font-weight:normal;
+      }
+    </style>
     <!-- Header -->
     <header class="header flex" role="banner">
         <div class="container animated fadeIn">
@@ -19,7 +24,7 @@ layout: compress
                         <img src="{{ site.logo }}" class="img-circle zoombtn animated rotateIn">
                     </a>
                     <h3 class="title">
-                      <p style="font-size:1.2rem;font-weight:300"><b>{{ site.title }}</b></p>
+                      <p style="font-size:1.2rem;font-weight:300"><b>{{ site.name }}</b></p>
                         <!-- <p style="font-size:1.2rem;font-weight:300">이현식</p> -->
                     </h3>
                     <hr class="hr-line">
@@ -29,7 +34,7 @@ layout: compress
                     {% include social-links.html %}
                   <hr class="hr-line">
                   <h3 class="title">
-                         <a class="btn zoombtn" href="{{ site.url }}/about">
+                         <a class="btn zoombtn" href="{{ site.url }}/about/index_en">
                          About Me
                          </a>
                          <a class="btn zoombtn" href="{{ site.url }}/projects">

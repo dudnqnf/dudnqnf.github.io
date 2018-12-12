@@ -1,5 +1,5 @@
 # Site
-title:              Daniel Hyunsik Lee
+name:               Daniel Hyunsik Lee
 bio:                'Software Engineer'
 description:        "blog"
 reading_time:       true
@@ -40,7 +40,7 @@ disqus_shortname:   taylantatli
 #email:
 #twitter:            username
 facebook:           dudnqnf
-github-url:         dudnqnf
+github-url:         hlee118
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
