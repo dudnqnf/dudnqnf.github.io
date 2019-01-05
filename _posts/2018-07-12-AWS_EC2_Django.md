@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AWS/EC2 Django diploy"
+title: "AWS/EC2 Django deploy"
 date: 2018-07-12
 excerpt: ""
 tags:
