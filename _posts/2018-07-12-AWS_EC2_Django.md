@@ -16,7 +16,11 @@ https://lhy.kr/ec2-ubuntu-deploy
 #### 트러블 이슈...
 - z-shell은 선택
 - PATH설정은 다른글 참조...
-- # uWSGI작동확인
+- mysqlclient 설치오류
+    # Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-install-qh4xyb0p/mysqlclient/
+    sudo apt-get install libmysqlclient-dev
+
+- uWSGI작동확인
     uwsgi \
     --http :(port) \
     --home (virtualenv경로) \
