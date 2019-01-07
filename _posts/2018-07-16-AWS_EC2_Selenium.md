@@ -7,11 +7,23 @@ tags:
 - AWS
 comments: true
 ---
-#### Reference
-https://christopher.su/2015/selenium-chromedriver-ubuntu/
 
-#### 트러블 이슈...
-- 기본적으로 Logging으로 확인
-- selenium 버전문제
-- webdriver 접근문제
+#### Process
+- Download webdriver
+    https://sites.google.com/a/chromium.org/chromedriver/
+
+- Set path
+    # hash shell
+    vim ~/.bashrc
+    # zshell
+    vim ~/.zshrc
+
+    export path="$PATH:경로"
+
+- Install
+    sudo apt-get -y install google-chrome-stable
+    sudo apt-get install libnss3-dev
+
+#### Trouble Issue
+- Use Python Loggin
 - (beautifulsoup4) html5lib -> lxml

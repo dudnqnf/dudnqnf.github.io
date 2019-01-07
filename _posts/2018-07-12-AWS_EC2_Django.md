@@ -28,6 +28,12 @@ https://lhy.kr/ec2-ubuntu-deploy
     -w <설정 패키지명>.wsgi
     <설정 패키지명> -> 장고 프로젝트 안의 wsgi파일 위치
 
+    /home/ubuntu/.pyenv/versions/uwsgi-env/bin/uwsgi \
+    --http :8080 \
+    --home /home/ubuntu/.pyenv/versions/django-deploy \
+    --chdir /home/ubuntu/django \
+    -w server.wsgi
+
 - Nginx 서비스 파일 안만들면 작동 안함
     (uwsgi.service는 과정안에 들어가 있음)
     # /etc/systemd/system/Nginx.service
