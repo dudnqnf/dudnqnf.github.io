@@ -17,10 +17,12 @@ https://lhy.kr/ec2-ubuntu-deploy
 - z-shell은 선택
 - PATH설정은 다른글 참조...
 - mysqlclient 설치오류
+
         # Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-install-qh4xyb0p/mysqlclient/
         sudo apt-get install libmysqlclient-dev
 
 - uWSGI작동확인
+
         uwsgi \
         --http :(port) \
         --home (virtualenv경로) \
@@ -36,6 +38,7 @@ https://lhy.kr/ec2-ubuntu-deploy
 
 
 - Nginx 서비스 파일 안만들면 작동 안함
+
         (uwsgi.service는 과정안에 들어가 있음)
         # /etc/systemd/system/Nginx.service
         [Unit]
@@ -62,6 +65,7 @@ https://lhy.kr/ec2-ubuntu-deploy
         /프로젝트 디렉토리.../uwsgi.ini
 
 #### Django Logging (EC2)
+
         # settings.py
         # LOG_DIR 는 접근이 가능해야 하므로 chmod나 chown 설정 변경해줘야 됨
 
