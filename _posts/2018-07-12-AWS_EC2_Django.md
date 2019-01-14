@@ -14,9 +14,13 @@ comments: true
 https://lhy.kr/ec2-ubuntu-deploy
 
 #### 트러블 이슈...
-    # z-shell은 선택이나 PATH설정 해주는 부분은 개인적으로 찾아서...
+- z-shell은 선택
+- PATH설정은 다른글 참조...
+- mysqlclient 설치오류
+    # Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-install-qh4xyb0p/mysqlclient/
+    sudo apt-get install libmysqlclient-dev
 
-    # uWSGI작동확인
+- uWSGI작동확인
     uwsgi \
     --http :(port) \
     --home (virtualenv경로) \
@@ -24,10 +28,14 @@ https://lhy.kr/ec2-ubuntu-deploy
     -w <설정 패키지명>.wsgi
     <설정 패키지명> -> 장고 프로젝트 안의 wsgi파일 위치
 
+    /home/ubuntu/.pyenv/versions/uwsgi-env/bin/uwsgi \
+    --http :8080 \
+    --home /home/ubuntu/.pyenv/versions/django-deploy \
+    --chdir /home/ubuntu/django \
+    -w server.wsgi
 
 
-
-    # Nginx 서비스 파일 안만들면 작동 안함
+- Nginx 서비스 파일 안만들면 작동 안함
     (uwsgi.service는 과정안에 들어가 있음)
     # /etc/systemd/system/Nginx.service
     [Unit]
@@ -46,18 +54,12 @@ https://lhy.kr/ec2-ubuntu-deploy
     [Install]
     WantedBy=multi-user.target
 
-
-
-
-    # Nginx 가상서버 설정 파일 작성
+- Nginx 가상서버 설정 파일 작성
     uwsgi_pass = unix:///tmp/server.sock
     => tmp 파일에 넣으면 읽지를 못함
     => run 파일로 변경(이 두가지 파일 전부)
     /etc/nginx/sites-available/server.conf
     /프로젝트 디렉토리.../uwsgi.ini
-
-
-    # 나머지 트러블 이슈...
 
 #### Django Logging (EC2)
     # settings.py
