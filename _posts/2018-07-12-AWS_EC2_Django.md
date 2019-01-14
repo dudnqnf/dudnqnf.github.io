@@ -33,6 +33,7 @@ https://lhy.kr/ec2-ubuntu-deploy
     --home /home/ubuntu/.pyenv/versions/django-deploy \
     --chdir /home/ubuntu/django \
     -w server.wsgi
+    
 
 - Nginx 서비스 파일 안만들면 작동 안함
     (uwsgi.service는 과정안에 들어가 있음)
