@@ -14,8 +14,9 @@ comments: true
 - 개발인원 : 1명
 - 역할 : 학부연구생
 - 연구기술 :
-	- python
+	- python, keras
 - 연구상세내역 :
-	- IPPS에 적용하기 전 더 간단한 스케쥴링문제인 TSP(Traveling Salesman Problem)에서 테스트
+	- TSP(Traveling Salesman Problem)에서 테스트
+	- IPPS(Integrated Process Planning and Scheduling)에 적용
   - meta-heuristic(GA, ACO), Machine-Learning(supervised, reinforcement) 등의 방법을 시도
-  - github : https://github.com/dudnqnf/IPPS
+  - github : https://github.com/hlee118/IPPS

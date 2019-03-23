@@ -10,7 +10,7 @@ comments: true
 
 #### Process
 - Download webdriver
-    https://sites.google.com/a/chromium.org/chromedriver/
+    http://chromedriver.storage.googleapis.com/index.html
 
 - Set path
     # hash shell
@@ -19,11 +19,14 @@ comments: true
     vim ~/.zshrc
 
     export path="$PATH:경로"
+    source ~/.shell_name
 
 - Install
     sudo apt-get -y install google-chrome-stable
     sudo apt-get install libnss3-dev
 
-#### Trouble Issue
-- Use Python Loggin
+#### Django
 - (beautifulsoup4) html5lib -> lxml
+
+#### Nodejs
+- chrome-option (--no-sandbox) 추가

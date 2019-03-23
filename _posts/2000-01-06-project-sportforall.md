@@ -18,7 +18,7 @@ comments: true
 - 근무처 : SportsFactory
 - 소개 : 생활체육 통합 플랫폼 (하이브리드 웹 어플리케이션)
 - 개발인원 : 5명
-- 역할 : 프로젝트 설계 및 구현 전체 / senior developer
+- 역할 : 프로젝트 설계 및 구현 전체 / Senior Developer
 - 개발기술 :
 	- front-end : java(Android), html, css, javascript(ajax)
 	- back-end : java(Spring), mybatis, mysql, apache-tomcat
