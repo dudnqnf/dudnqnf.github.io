@@ -32,7 +32,8 @@ comments: true
 ## Preview
 
 {% capture images %}
-../assets/img/project/hongikmagics_mobile0.png
-../assets/img/project/hongikmagics_mobile1.png
-../assets/img/project/hongikmagics_mobile2.png
+![Preview Img](../assets/img/project/hongikmagics_mobile0.png)
+![Preview Img](../assets/img/project/hongikmagics_mobile1.png)
+![Preview Img](../assets/img/project/hongikmagics_mobile2.png)
 {% endcapture %}
+{% include gallery images=images caption="모바일웹, 하이브리드웹앱" cols=3 %}

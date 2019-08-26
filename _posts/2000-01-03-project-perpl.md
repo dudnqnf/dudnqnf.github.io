@@ -28,10 +28,9 @@ comments: true
   - 개발은 완료하였으나 서비스는 하지않음
 
 ## Preview
-
 {% capture images %}
 ![Preview Img](../assets/img/project/perpl2.png)
 ![Preview Img](../assets/img/project/perpl3.png)
 ![Preview Img](../assets/img/project/perpl5.png)
 {% endcapture %}
-{% include gallery images=images caption="모바일웹, 하이브리드웹앱" cols=3 %}
+{% include gallery images=images caption="안드로이드 앱" cols=3 %}
