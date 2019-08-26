@@ -32,7 +32,7 @@ comments: true
 ## Preview
 {% capture images %}
 ../assets/img/project/hongikmagics_mobile0.png
-../assets/img/project/hongikmagics_mobile0.png
-../assets/img/project/hongikmagics_mobile0.png
+../assets/img/project/hongikmagics_mobile1.png
+../assets/img/project/hongikmagics_mobile2.png
 {% endcapture %}
 {% include gallery images=images caption="안드로이드 앱" cols=3 %}
