@@ -30,6 +30,7 @@ comments: true
 
 
 ## Preview
+
 {% capture images %}
 ../assets/img/project/hongikmagics_mobile0.png
 ../assets/img/project/hongikmagics_mobile1.png
