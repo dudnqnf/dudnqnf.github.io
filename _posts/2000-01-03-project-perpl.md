@@ -25,7 +25,7 @@ comments: true
   - 서버 환경세팅 및 데이터베이스 설계
   - nodejs를 통해 android와 json통신하는 부분 개발
   - push서버, 동영상 업로드/편집 기능 등 개발
-  - 개발은 완료하였으나 서비스는 하지않음
+  - 서비스 종료
 
 ## Preview
 

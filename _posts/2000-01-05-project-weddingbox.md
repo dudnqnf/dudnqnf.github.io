@@ -30,3 +30,4 @@ comments: true
 ../assets/img/project/weddingbox2.png
 ../assets/img/project/weddingbox3.png
 {% endcapture %}
+{% include gallery images=images caption="안드로이드 앱" cols=3 %}

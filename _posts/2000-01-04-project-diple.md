@@ -22,7 +22,7 @@ comments: true
 - 개발상세내역 :
   - 서버 환경세팅 및 데이터베이스 설계
   - nodejs를 통해 android와 json통신하는 부분 개발
-	- 개발은 완료하였으나 서비스는 하지않음
+	- 서비스 종료
 
 ## Preview
 {% capture images %}
@@ -30,3 +30,4 @@ comments: true
 ../assets/img/project/diple3.png
 ../assets/img/project/diple4.png
 {% endcapture %}
+{% include gallery images=images caption="안드로이드 앱" cols=3 %}
